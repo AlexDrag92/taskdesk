@@ -1,0 +1,32 @@
+.page-navigation{
+  @include clearfix();
+  &--full-size{
+  }
+}
+
+.page-navigation__show-button{
+  display: none;
+  margin: 0 auto 20px;
+}
+
+.page-navigation__logo{
+  margin-top: 20px;
+  margin-right: 100px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+@media (max-width: $screen-lg-min - 1) {
+  .page-navigation__logo{
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .page-navigation__show-button{
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+}
+

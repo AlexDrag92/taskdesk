@@ -1,0 +1,73 @@
+.advantages{
+  @extend .container;
+}
+
+.advantages__header{
+  margin-top: 100px;
+  margin-bottom: 80px;
+  font-size: 30px;
+  font-family: 'Uni Neue Heavy';
+  color: $color4;
+  text-align: center;
+}
+
+.advantages__list{
+  @extend .row;
+  padding: 0;
+  padding-top: 70px;
+
+  border: 2px solid $color6;
+  border-right: none;
+  border-left: none;
+  list-style-type: none;
+}
+
+
+.advantages__item{
+  @include make-xs-column(12);
+  @include make-sm-column(6);
+  @include make-md-column(6);
+  @include make-lg-column(5);
+
+  &:nth-child(1),
+  &:nth-child(3){
+    @include make-md-column-offset(0);
+    @include make-lg-column-offset(1);
+  }
+
+  margin-bottom: 100px;
+  padding-left: 85px;
+
+  background:
+  url('../img/icons/sprite.png')
+  no-repeat;
+
+  &--walet{
+    background-position: 5px -2049px;
+  }
+
+  &--messages{
+    background-position: 5px -1881px;
+  }
+
+  &--envelope{
+    background-position: 5px -1563px;
+  }
+
+  &--hands{
+    background-position: 5px -1719px
+  }
+}
+
+.advantages__advantage-title{
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-family: 'Uni Neue Heavy';
+  color: $color4;
+}
+
+.advantages__advantage-description{
+  font-size: 16px;
+  color: $color5;
+}

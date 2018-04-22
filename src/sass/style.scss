@@ -1,0 +1,32 @@
+//Var
+@import 'variables.scss';
+
+//Fonts
+@import '../fonts/fonts.css';
+
+//Libs
+@import '../libs/bootsrap/stylesheets/_bootstrap.scss';
+@import '../libs/jquery-ui/jquery-ui.min.css';
+
+//Global
+@import 'mixins.scss';
+@import 'global.scss';
+@import 'button.scss';
+
+//Blocks
+@import 'blocks/page-wrapper.scss';
+@import 'blocks/main-page-header.scss';
+@import 'blocks/page-navigation.scss';
+@import 'blocks/page-navigation-list-section.scss';
+@import 'blocks/menu-section.scss';
+@import 'blocks/jumbotron-page.scss';
+@import 'blocks/user-block.scss';
+@import 'blocks/search-form.scss';
+@import 'blocks/categories.scss';
+@import 'blocks/workflow.scss';
+@import 'blocks/advantages.scss';
+@import 'blocks/service-description.scss';
+@import 'blocks/blog-news.scss';
+@import 'blocks/article-link.scss';
+@import 'blocks/get-jobs.scss';
+@import 'blocks/footer.scss';

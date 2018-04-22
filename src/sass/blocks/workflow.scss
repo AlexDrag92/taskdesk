@@ -1,0 +1,144 @@
+.workflow{
+  padding: 130px 0;
+  background-color: $color6;
+}
+
+.workflow__link{
+
+ @include make-xs-column(10);
+ @include make-xs-column-offset(1);
+ 
+ @include make-sm-column(8);
+ @include make-sm-column-offset(2);
+
+ @include make-md-column(6);
+ @include make-md-column-offset(0);
+
+ @include make-lg-column-offset(0);
+ @include make-lg-column(6);
+
+
+ font-size: 18px;
+ color: $color3;
+ text-align: center;
+
+ &:hover{
+  color: $color2;
+  text-decoration: none;
+
+  span{
+    &::after{
+      background-position: 0 -456px
+    }
+  }
+}
+
+span{
+  display: inline-block;
+  margin-top: 50px;
+  &::after{
+    transition: background .4s;
+    top: 4px;
+    content: '';
+    display: inline-block;
+    margin-left: 20px;
+    width: 18px;
+    height: 18px;
+    background:
+    url('../../img/icons/sprite.png')
+    no-repeat
+    0 -572px;
+  }
+}
+}
+
+.workflow__image{
+  display: block;  
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 5px 80px $color1;
+}
+
+.workflow__set-task-link{
+  clear: both;
+  display: block;
+}
+
+
+.workflow__phases{
+ @include make-xs-column(10);
+ @include make-xs-column-offset(1);
+ 
+ @include make-sm-column(8);
+ @include make-sm-column-offset(2);
+
+ @include make-md-column(6);
+ @include make-md-column-offset(0);
+
+ @include make-lg-column(5,0);
+ @include make-lg-column-offset(.9);
+}
+
+
+.workflow__header{
+  margin-top: 0;
+  margin-bottom: 60px;
+  font-size: 30px;
+  font-family: 'Uni Neue Heavy';
+  color: $color4;
+}
+
+.workflow-descriptin__list{
+  padding: 0;
+  list-style-type: none;
+}
+
+
+
+.workflow__phase-title{
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-family: 'Uni Neue Heavy';
+  color: $color4;
+
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateX(-100%);
+    
+    width: 50px;
+    height: 2px;
+    background: $color5; 
+  }
+
+  &--red-line{
+     &::before{
+      width: 100px;
+      background: red;
+     }
+  }
+}
+
+.workflow__phase-description{
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: $color5;
+}
+
+@media (max-width: $screen-lg-min - 1){
+  .workflow__phase-title{
+    &::before{
+      content: none;
+    }
+  }
+}
+@media (max-width: $screen-md-min - 1){
+  .workflow__link{
+    margin-bottom: 60px;
+  }
+}

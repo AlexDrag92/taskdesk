@@ -1,0 +1,75 @@
+.service-description{
+
+}
+
+.service-description__content-wrapper{
+  @include make-lg-column(6);
+  margin-bottom: 130px;
+}
+
+.service-description__header{
+  margin-top: 150px;
+  margin-bottom: 100px;
+  font-size: 30px;
+  font-family: 'Uni Neue Heavy';
+  color: $color4;
+}
+
+.service-description__paragraph{
+  font-size: 16px;
+  color: $color5;
+  &:last-child{
+    margin-bottom: 110px;
+  }
+}
+
+.service-description__img-wrapper{
+
+  @include make-lg-column(6);
+  margin-top: 115px;
+  margin-bottom: 130px;
+  text-align: center;
+}
+
+.service-description__image{
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: $screen-lg-min - 1){
+  .service-description__content-wrapper{
+    margin-bottom: 60px;
+  }
+  
+  .service-description__paragraph{
+    display: inline-block;
+    width: 45.5%;
+    padding: 0 12px;
+    vertical-align: top;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  .service-description__img-wrapper{
+    margin-top: 0;
+  }
+
+  
+}
+
+@media (max-width: $screen-md-min - 1){
+}
+
+@media (max-width: $screen-sm-min - 1){
+  .service-description__paragraph{
+    display: inline-block;
+    width: auto;
+    padding: 0;
+  }
+}
+
+@media (max-width: $screen-xs-min - 1){
+
+}

@@ -1,0 +1,16 @@
+.page-wrapper{
+  position: relative;
+}
+
+.page-wrapper__scroll-button{
+  position: absolute;
+  bottom: 28px;
+  right:  100px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background:
+  url('../img/icons/sprite.png')
+  no-repeat
+  0 -688px;
+}

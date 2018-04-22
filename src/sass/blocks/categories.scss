@@ -1,0 +1,114 @@
+.categories{
+  @extend .container;
+}
+
+.categories__header{
+  margin-top: 100px;
+  font-size: 30px;
+  font-family: 'Uni Neue Heavy';
+  color: $color4;
+  text-align: center;
+
+}
+
+.categories__sub-header{
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 100px; 
+  font-size: 15px;
+  text-align: center;
+  color: $color5;
+
+  a{
+    color: $color2;
+    &:hover{
+      text-decoration: none;
+      color: $color3;
+    }
+  }
+}
+
+
+.categories__lists{
+  @include make-row();
+}
+
+.categories__category{
+  @include make-xs-column(12);
+  @include make-sm-column(6);
+  @include make-md-column(6);
+  @include make-lg-column(4);
+  margin-bottom: 80px;
+}
+
+
+.categories__category-header{
+  margin-bottom: 0;
+  padding-left: 45px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-family: 'Uni Neue Heavy';
+  background:
+  
+  url('../img/icons/sprite.png')
+  no-repeat
+  ;
+  color: $color4;
+  
+
+  &--home{
+    background-position:  0 -1439px;
+  }
+   &--roll{
+    background-position: 0 -934px;
+  }
+   &--transport{
+    background-position: 0 -1059px;
+  }
+   &--moped{
+    background-position: 0 -808px;
+  }
+   &--plug{
+    background-position: 0 -1181px;
+  }
+   &--woman{
+    background-position: 0 -1314px;
+  }
+
+}
+
+.categories__list{
+  list-style-type: none;
+  padding-left: 45px;
+
+}
+
+.categories__item{
+  margin-bottom: 15px;
+
+   &:last-child{
+    font-family: 'Uni Neue Heavy';
+  }
+}
+.categories__link{
+  
+  font-weight: bold;
+  font-size: 16px;
+  color: $color2;
+  transition: .3s;
+
+  &:hover{
+    color: $color3;
+    text-decoration: none;
+  }
+}
+
+.categories__button{
+  display: block;
+  width: 230px;
+  margin: 0 auto;
+  margin-bottom: 130px;
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
+}

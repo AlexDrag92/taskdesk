@@ -1,0 +1,81 @@
+.jumbotron-page{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  background:
+    $color1
+    url('../img/bg/jumb-bg.jpg')
+    no-repeat
+    center center
+    ;
+    background-size: cover;
+}
+
+.jumbotron-page_main-page-header{
+  margin-top: 235px;
+  font-size: 55px;
+  list-style: 84px;
+  font-family: 'Uni Neue Heavy';
+  text-align: center;
+  color: $white;
+}
+
+.jumbotron-page_sub-page-header{
+  display: block;
+  margin-bottom: 60px;
+  font-size: 23px;
+  text-align: center;
+  color: $white;
+}
+
+.jumbotron-page__arrow-down{
+  display: block;
+  width: 25px;
+  height: 45px;
+  margin: 200px auto 100px;
+  border: 2px solid rgba(255,255,255, .4);
+  background:
+    transparent
+    url('../img/icons/arrow-down-sign-to-navigate.png')
+    no-repeat
+    center 4px
+  ;
+  background-size: 60%;
+  border-radius: 40px;
+  
+  animation: arrow-animation .8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  &:hover{
+    animation-play-state: paused;
+  }
+}
+
+
+@keyframes arrow-animation{
+  from { 
+    background-position: center 4px;
+  }
+  to {
+    background-position: center 25px;
+  }
+}
+
+
+@media (max-width: $screen-lg-min - 1){
+  .jumbotron-page_main-page-header{
+    margin-top: 50px;
+    font-size: 40px;
+  }
+
+  .jumbotron-page_sub-page-header{
+    font-size: 20px;
+  }
+}
+
+@media (max-width: $screen-md-min - 1){
+  .jumbotron-page__arrow-down{
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}

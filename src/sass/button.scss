@@ -1,0 +1,49 @@
+.button{
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: $color2;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  transition: background-color .3s;
+  
+  &:hover{
+    text-decoration: none;
+    color: $white;
+    background-color: darken($color2, 20%);
+
+  }
+
+  &--small-font{
+    font-size: 12px;
+  }
+
+  &--red{
+    background-color: $color3;
+    
+    &:hover{
+      background-color: darken($color3, 20%);
+    }
+  }
+
+  &--full-width{
+    width: 100%;
+  }
+
+  &--transparent{
+    background: transparent;
+    border: 2px solid $color2;
+    color: $color2;
+  }
+
+  &--center{ //only if element is sole in the stroke
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &--high{
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}

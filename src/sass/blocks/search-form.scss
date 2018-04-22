@@ -1,0 +1,100 @@
+.search-form{
+  @extend .container;
+}
+
+.search-form__elements-group{
+  @extend .row;
+}
+
+.search-form__area-wrapper{
+  @include make-md-column(6);
+  @include make-lg-column(5);
+  @include make-lg-column-offset(1);
+}
+
+.search-form__service-area{
+  padding: 15px 0;
+  padding-left: 50px;
+  border: none;
+  border-radius: 5px;
+  background: 
+  $white
+  url('../img/icons/sprite.png')
+  no-repeat
+  16px -211px;
+
+  outline: none;
+
+  color: $color3;
+
+  &::placeholder {
+    color: $color5;
+  }
+
+  &--full-size{
+    width: 100%;
+
+  }
+}
+
+.search-form__example-service{
+  display: block;
+  margin-top: 8px;
+  color: $color6;
+  font-size: 16px;
+}
+
+.search-form__select-city-wrapper{
+  @include make-md-column(6);
+  @include make-lg-column(3);
+}
+
+.search-form__select-city{
+  width: 100%;
+  padding: 15px 0;
+  padding-left: 50px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Uni Neue Regular';
+  outline: none;
+
+  background: 
+  $white
+  url('../img/icons/sprite.png')
+  no-repeat
+  16px -329px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+
+}
+
+
+.search-form__submit-button-wrapper{
+  @include make-lg-column(2);
+}
+
+
+@media (max-width: $screen-lg-min - 1){
+  .search-form__submit-button{
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: $screen-md-min - 1){
+  .search-form__example-service{
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: $screen-sm-min - 1){
+  .search-form__example-service{
+    margin-bottom: 20px;
+  }
+}

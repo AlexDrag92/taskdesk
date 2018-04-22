@@ -1,0 +1,166 @@
+.footer{
+  background: $color1;
+}
+
+
+
+.footer__section{
+  @include make-xs-column(11);
+  @include make-xs-column-offset(1);
+  @include make-sm-column(4);
+  @include make-sm-column-offset(0);
+  @include make-lg-column(2);
+
+
+}
+
+.footer__list-title{
+  margin-top: 70px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 15px;
+  color: $color5;
+}
+
+.footer__list{
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer__item{
+  margin-bottom: 15px;
+}
+
+.footer__link{
+  font-size: 15px;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: color .3s;
+  &:hover{
+    color: $color2;
+    text-decoration: $color1;
+  }
+}
+
+
+.footer__contacts-info{
+  @include make-xs-column(12);
+  @include make-lg-column(4);
+  margin-top: 115px;
+}
+
+
+.support-button{
+  vertical-align: top;
+}
+
+
+.footer__social-links{
+  display: inline-block;
+  margin-left: 17px;
+  padding: 0;
+  list-style-type: none;
+  vertical-align: top;
+  font-size: 0;
+}
+
+.footer__social-item{
+  display: inline-block;
+  margin-right: 10px;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.footer__social-link{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: 
+  $color6
+  url('../img/icons/sprite.png');
+  border-radius: 3px;
+
+
+  &--facebook{
+    background-position: 5px -2208px; 
+  }
+
+  &--odnoklassniki{
+    background-position: 5px -2328px;
+  }
+
+  &--vkontakte{
+    background-position: 5px -2443px;
+  }
+}
+
+.footer__additoinal-info{
+  color: $color5;
+  margin-top: 40px;
+  font-size: 13px;
+}
+
+
+.footer__copyright{
+  margin-top: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 2px solid $color5;
+  line-height: 30px;
+
+  color: $color5;
+  font-weight: bold;
+  font-family: 'Uni Neue Book';
+}
+
+.footer__copyright-info{
+
+}
+
+.footer__copyright-rights{
+  @include make-xs-column(12);
+  @include make-sm-column(6);
+}
+
+
+
+.footer__development{
+  @include make-xs-column(11);
+  @include make-sm-column(4);
+
+  right: 0;
+  text-align: right;
+  color: $color5;
+  a{
+    color: $color5;
+
+    &:hover{
+      color: $color2;
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+@media (max-width: $screen-sm-min - 1){
+  .footer__development{
+    text-align: left;
+  }
+}
+
+@media (max-width: $screen-xs-min - 1){
+  .footer__social-links{
+    display: block;
+    margin-left: 0;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .support-button{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
