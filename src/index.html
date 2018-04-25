@@ -1,370 +1,390 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TaskDesk</title>
-<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-<link href="favicon.ico" rel="shortcut icon" type="image/ico">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskDesk</title>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="favicon.ico" rel="shortcut icon" type="image/ico">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
-<div id="page-wrapper" class="page-wrapper">
-
-<header class="main-page-header">
-  <nav id="top-navigation" class="page-navigation page.footer--full-size">
-    <div class="container">
-      <div class="row" >
-        <div class="page-navigation__logo">
-          <a href="#" class="page-navigation__main-link">
-            <img src="img/task_desk_logo.png" class="header-navbar-logo__img" alt="Task Desk logo">
-          </a>
-        </div>
-        <button type="button" class="button page-navigation__show-button">MENU</button>
-        <section class="menu-section menu-section--dropdown">
-          <button type="button" class="menu-section__dropdown-button"></button>
-          <h3 class="menu-section__hidden-title">Инфо</h3>
-          <ul class="menu-section__list menu-section__list--dropdown">
-            <li class="menu-section__item menu-section__item--dropdown-item">
-              <a href="#" class="menu-section__link menu-section__link--dropdown-link">Как это работает</a>
-            </li>
-            <li class="menu-section__item menu-section__item--dropdown-item">
-              <a href="#" class="menu-section__link menu-section__link--dropdown-link">Как стать исполнителем</a>
-            </li>
-            <li class="menu-section__item menu-section__item--dropdown-item">
-              <a href="#" class="menu-section__link menu-section__link--dropdown-link">Как пополнить счет</a>
-            </li>
-            <li class="menu-section__item menu-section__item--dropdown-item">
-              <a href="#" class="menu-section__link menu-section__link--dropdown-link">Как стать заказчиком</a>
-            </li>
-          </ul>
-        </section>
-        <section class="menu-section">
-          <h3 class="menu-section__hidden-title">Меню</h3>
-          <ul class="menu-section__list">
-            <li class="menu-section__item">
-              <a href="#" class="menu-section__link">Создать задание</a>
-            </li>
-            <li class="menu-section__item">
-              <a href="#" class="menu-section__link">Все задания</a>
-            </li>
-            <li class="menu-section__item">
-              <a href="#" class="menu-section__link">Исполнители</a>
-            </li>
-            <li class="menu-section__item">
-              <a href="#" class="menu-section__link">Стать исполнителем</a>
-            </li>
-          </ul>
-        </section>
-        <div class="user-block">
-          <div class="user-block__change-lang">
-            <button class="user-block__lang-item user-block__lang-item--active lang-ru" type="button">Ru</button> /
-            <button class="user-block__lang-item lang-ro" type="button">Ro</button>
+  <div id="page-wrapper" class="page-wrapper">
+    <header class="header">
+      <div class="container">
+        <nav class="header__main-navbar  row navbar">
+          <div class="header__navbar-header  navbar-header">
+            <a href="#" class="header__logo">
+              <img src="img/task_desk_logo.png" alt="logo">
+            </a>
+            <button type="button" class="header__toggle-menu-button navbar-toggle collapsed"  data-toggle="collapse" data-target="#collapse-1" aria-expanded="false">
+              menu
+            </button>
           </div>
-          <a href="#" class="enter-registration button">Вход или регистрация</a>
+          <div class="header__collapse-section  collapse navbar-collapse" id="collapse-1">
+            <ul class="header__collapse-list  nav navbar-nav">
+              <li class="header__collapse-item header__collapse-item--dropdown  dropdown">
+                <a href="#" class="header__dropdown-button dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                <ul class="dropdown-menu header__dropdown-list">
+                  <li class="header__collapse-item header__collapse-item--mobile-underline header__collapse-link--padding-left ">
+                    <a href="#" class="header__collapse-link header__collapse-link--padding-left  header__collapse-link--no-padding-left">Как это работает</a>
+                  </li>
+                  <li class="header__collapse-item header__collapse-item--mobile-underline">
+                    <a href="#" class="header__collapse-link header__collapse-link--padding-left">Как стать исполнителем</a>
+                  </li>
+                  <li class="header__collapse-item header__collapse-item--mobile-underline">
+                    <a href="#" class="header__collapse-link header__collapse-link--padding-left">Как стать заказчиком</a>
+                  </li>
+                  <li class="header__collapse-item header__collapse-item--mobile-underline">
+                    <a href="#" class="header__collapse-link header__collapse-link--padding-left">Как пополнить счёт</a>
+                  </li>
+                  <li class="header__collapse-item header__collapse-item--mobile-underline">
+                    <a href="#" class="header__collapse-link header__collapse-link--padding-left">Правила сервиса</a>
+                  </li>
+                  <li class="header__collapse-item header__collapse-item--mobile-underline">
+                    <a href="#" class="header__collapse-link header__collapse-link--padding-left">Частые вопросы</a>
+                  </li>
+                  <li class="header__collapse-item header__collapse-item--mobile-underline">
+                    <a href="#" class="header__collapse-link header__collapse-link--padding-left">Наш блог</a>
+                  </li>
+                  <li class="header__collapse-item header__collapse-item--mobile-underline">
+                    <a href="#" class="header__collapse-link header__collapse-link--padding-left">Контакты</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="header__collapse-item header__collapse-item--mobile-underline">
+                <a href="#" class="header__collapse-link">Создать задание</a>
+              </li>
+              <li class="header__collapse-item header__collapse-item--mobile-underline">
+                <a href="#" class="header__collapse-link">Все задания</a>
+              </li>
+              <li class="header__collapse-item header__collapse-item--mobile-underline">
+                <a href="#" class="header__collapse-link">Исполнители</a>
+              </li>
+              <li class="header__collapse-item header__collapse-item--mobile-underline">
+                <a href="#" class="header__collapse-link">Стать исполнителем</a>
+              </li>
+            </ul>
+
+            <ul class="nav navbar-right navbar-right--custom">
+              <li class="header__collapse-item" >
+                <div class="user-section">
+                  <div class="user-section__change-lang">
+                    <button class="user-section__lang-item user-section__lang-item--active">Ru</button>
+                    /
+                    <button class="user-section__lang-item">Ro</button>
+                  </div>
+                  <button class="button button--small-font user-section__enter-registration">Вход или Регистрация</button>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </nav>
+      </div>
+
+    </header>
+
+
+    <section class="jumbotron-page">
+      <h1 class="jumbotron-page_main-page-header">Выбирайте лучших специалистов</h1>
+      <b class="jumbotron-page_sub-page-header">Поможем найти надежного исполнителя для любых задач</b>
+      <form action="#" method="get" class="search-form">
+        <fieldset class="search-form__elements-group">
+          <div class="search-form__area-wrapper">
+            <input type="text" placeholder="Введите специалиста или услугу" class="search-form__service-area search-form__service-area--full-size">
+            <span class="search-form__example-service">Например, <u>Электромонтажные работы</u></span>
+          </div>
+          <div class="search-form__select-city-wrapper">
+            <select name="sel" id="sel" class="search-form__select-city">
+              <option value="0">Выберете город</option>
+              <option value="0">Кишинев</option>
+            </select>
+          </div>
+          <div class="search-form__submit-button-wrapper">
+            <button type="submit" class="button button--full-width button--high button--red search-form__submit-button" >Найти</button>
+          </div>
+        </fieldset>
+      </form>
+      <a href="#categories" class="jumbotron-page__arrow-down"></a>
+    </section>
+
+    <section id="categories" class="categories">
+      <h2 class="categories__header">В нашей базе более чем 100 категорий</h2>
+      <b class="categories__sub-header">мы создали удобную навигацию и <a href="#">фильтрацию</a> для пользователей</b>
+      <div class="categories__lists">
+        <div class="categories__category">
+          <h3 class="categories__category-header categories__category-header--home">Помощь по хозяйству</h3>
+          <ul class="categories__list">
+            <li class="categories__item"><a href="#" class="categories__link">Поддерживающая уборка</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Генеральная уборка</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Мытье окон</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Приготовление еды</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Няни</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Все услуги</a></li>
+          </ul>
+        </div>
+        <div class="categories__category">
+          <h3 class="categories__category-header categories__category-header--roll">Ремонт и строительство</h3>
+          <ul class="categories__list">
+            <li class="categories__item"><a href="#" class="categories__link">Ремонт и строительство</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Ремонт под ключ</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Кровельные и фасадные работы</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Сантехнические работы</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Отопление, водоснабжение, канализация</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Все услуги</a></li>
+          </ul>
+        </div>
+        <div class="categories__category">
+          <h3 class="categories__category-header categories__category-header--transport">Перевозки</h3>
+          <ul class="categories__list">
+            <li class="categories__item"><a href="#" class="categories__link">Крупнотоннажные грузы</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Перевозка вещей, переезды</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Междугородние перевозки</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Пассажирские перевозки</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Личный водитель</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Все услуги</a></li>
+          </ul>
+        </div>
+        <div class="categories__category">
+          <h3 class="categories__category-header categories__category-header--moped">Курьерские услуги</h3>
+          <ul class="categories__list">
+            <li class="categories__item"><a href="#" class="categories__link">Услуги пешего курьера</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Услуги курьера на автомобиле </a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Купить и доставить</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Доставка продуктов</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Доставка еды из ресторанов</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Все услуги</a></li>
+          </ul>
+        </div>
+        <div class="categories__category">
+          <h3 class="categories__category-header categories__category-header--plug">Установка и ремонт техники</h3>
+          <ul class="categories__list">
+            <li class="categories__item"><a href="#" class="categories__link">Климатическая техника</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Холодильники и морозильные камеры</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Водонагреватели, бойлеры, котлы</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Посудомоечные машины</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Электрические плиты и панели</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Все услуги</a></li>
+          </ul>
+        </div>
+        <div class="categories__category">
+          <h3 class="categories__category-header categories__category-header--woman">Красота и здоровье</h3>
+          <ul class="categories__list">
+            <li class="categories__item"><a href="#" class="categories__link">Парикмахерские услуги</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Ногтевой сервис</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Массаж</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Косметология лица</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Косметология тела</a></li>
+            <li class="categories__item"><a href="#" class="categories__link">Все услуги</a></li>
+          </ul>
         </div>
       </div>
-    </div>
-  </nav>
-</header>
+      <a href="#" class="button button--transparent categories__button">Показать все категории</a>
+    </section>
 
-<section class="jumbotron-page">
-  <h1 class="jumbotron-page_main-page-header">Выбирайте лучших специалистов</h1>
-  <b class="jumbotron-page_sub-page-header">Поможем найти надежного исполнителя для любых задач</b>
-  <form action="#" method="get" class="search-form">
-    <fieldset class="search-form__elements-group">
-      <div class="search-form__area-wrapper">
-        <input type="text" placeholder="Введите специалиста или услугу" class="search-form__service-area search-form__service-area--full-size">
-        <span class="search-form__example-service">Например, <u>Электромонтажные работы</u></span>
+    <section class="workflow">
+      <div class="container">
+        <div class="row">
+          <a href="#" class="workflow__link">
+            <img src="img/content/workflow.jpg" alt="Site screenshot" class="workflow__image">
+            <span>Разместите задание прямо сейчас</span>
+          </a>
+          <div class="workflow__phases">
+            <h2 class="workflow__header">Как это работает</h2>
+            <ul class="workflow-descriptin__list">
+              <li class="workflow__phase">
+                <b class="workflow__phase-title workflow__phase-title--red-line">Укажите необходимую услуги и район</b>
+                <p class="workflow__phase-description">Опишите своими словами задачу, которую требуется выполнить.</p>
+              </li>
+              <li class="workflow__phase">
+                <b class="workflow__phase-title">Посмотрите анкеты с отзывами и отправьте заявку</b>
+                <p class="workflow__phase-description">Уже через пару минут вы начнете получать предложения от исполнителей, готовых выполнить ваше задание.</p>
+              </li>
+              <li class="workflow__phase">
+                <b class="workflow__phase-title">Выберете наилучшее предложение</b>
+                <p class="workflow__phase-description">Вы сможете выбрать подходящего исполнителя, по разным критериям: Стоимость услуг, Отзывы заказчиков и рейтинг.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="search-form__select-city-wrapper">
-        <select name="sel" id="sel" class="search-form__select-city">
-          <option value="0">Выберете город</option>
-          <option value="0">Кишинев</option>
-        </select>
-      </div>
-      <div class="search-form__submit-button-wrapper">
-        <button type="submit" class="button button--full-width button--high button--red search-form__submit-button" >Найти</button>
-      </div>
-    </fieldset>
-  </form>
-  <a href="#categories" class="jumbotron-page__arrow-down"></a>
-</section>
+    </section>
 
-<section id="categories" class="categories">
-  <h2 class="categories__header">В нашей базе более чем 100 категорий</h2>
-  <b class="categories__sub-header">мы создали удобную навигацию и <a href="#">фильтрацию</a> для пользователей</b>
-  <div class="categories__lists">
-    <div class="categories__category">
-      <h3 class="categories__category-header categories__category-header--home">Помощь по хозяйству</h3>
-      <ul class="categories__list">
-        <li class="categories__item"><a href="#" class="categories__link">Поддерживающая уборка</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Генеральная уборка</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Мытье окон</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Приготовление еды</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Няни</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Все услуги</a></li>
+    <section class="advantages">
+      <h2 class="advantages__header">Приемущества нашего сервиса</h2>
+      <ul class="advantages__list">
+        <li class="advantages__item advantages__item--walet">
+          <b class="advantages__advantage-title">Экономия финансов и времени</b>
+          <p class="advantages__advantage-description">Пользуйтесь сервисом на своих мобильных устройствах Создавайте задания и подбирайте мастеров из любой точки мира.</p>
+        </li>
+        <li class="advantages__item advantages__item--messages">
+          <b class="advantages__advantage-title">Мгновенные уведомления</b>
+          <p class="advantages__advantage-description">Идейные соображения высшего порядка, а также сложившаяся структура организации обеспечивает широкому кругу.</p>
+        </li>
+        <li class="advantages__item advantages__item--envelope">
+          <b class="advantages__advantage-title">Достоверные отзывы</b>
+          <p class="advantages__advantage-description">Не следует, однако забывать, что рамки и место обучения кадров позволяет выполнять важные задания по разработке форм развития.</p>
+        </li>
+        <li class="advantages__item advantages__item--hands">
+          <b class="advantages__advantage-title">Отличные результаты</b>
+          <p class="advantages__advantage-description">Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности играет важную роль.</p>
+        </li>
       </ul>
-    </div>
-    <div class="categories__category">
-      <h3 class="categories__category-header categories__category-header--roll">Ремонт и строительство</h3>
-      <ul class="categories__list">
-        <li class="categories__item"><a href="#" class="categories__link">Ремонт и строительство</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Ремонт под ключ</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Кровельные и фасадные работы</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Сантехнические работы</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Отопление, водоснабжение, канализация</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Все услуги</a></li>
-      </ul>
-    </div>
-    <div class="categories__category">
-      <h3 class="categories__category-header categories__category-header--transport">Перевозки</h3>
-      <ul class="categories__list">
-        <li class="categories__item"><a href="#" class="categories__link">Крупнотоннажные грузы</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Перевозка вещей, переезды</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Междугородние перевозки</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Пассажирские перевозки</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Личный водитель</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Все услуги</a></li>
-      </ul>
-    </div>
-    <div class="categories__category">
-      <h3 class="categories__category-header categories__category-header--moped">Курьерские услуги</h3>
-      <ul class="categories__list">
-        <li class="categories__item"><a href="#" class="categories__link">Услуги пешего курьера</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Услуги курьера на автомобиле </a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Купить и доставить</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Доставка продуктов</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Доставка еды из ресторанов</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Все услуги</a></li>
-      </ul>
-    </div>
-    <div class="categories__category">
-      <h3 class="categories__category-header categories__category-header--plug">Установка и ремонт техники</h3>
-      <ul class="categories__list">
-        <li class="categories__item"><a href="#" class="categories__link">Климатическая техника</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Холодильники и морозильные камеры</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Водонагреватели, бойлеры, котлы</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Посудомоечные машины</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Электрические плиты и панели</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Все услуги</a></li>
-      </ul>
-    </div>
-    <div class="categories__category">
-      <h3 class="categories__category-header categories__category-header--woman">Красота и здоровье</h3>
-      <ul class="categories__list">
-        <li class="categories__item"><a href="#" class="categories__link">Парикмахерские услуги</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Ногтевой сервис</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Массаж</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Косметология лица</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Косметология тела</a></li>
-        <li class="categories__item"><a href="#" class="categories__link">Все услуги</a></li>
-      </ul>
-    </div>
-  </div>
-  <a href="#" class="button button--transparent categories__button">Показать все категории</a>
-</section>
+    </section>
 
-<section class="workflow">
-  <div class="container">
-    <div class="row">
-      <a href="#" class="workflow__link">
-        <img src="img/content/workflow.jpg" alt="Site screenshot" class="workflow__image">
-        <span>Разместите задание прямо сейчас</span>
-      </a>
-      <div class="workflow__phases">
-        <h2 class="workflow__header">Как это работает</h2>
-        <ul class="workflow-descriptin__list">
-          <li class="workflow__phase">
-            <b class="workflow__phase-title workflow__phase-title--red-line">Укажите необходимую услуги и район</b>
-            <p class="workflow__phase-description">Опишите своими словами задачу, которую требуется выполнить.</p>
+    <section class="service-description">
+      <div class="container">
+        <div class="row">
+          <div class="service-description__content-wrapper"> 
+            <h2 class="service-description__header">Пользуйтесь сервисом на своих мобильных устройствах</h2>
+            <p class="service-description__paragraph">Разнообразный и богатый опыт новая модель организационной деятельности влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Задача организации, в особенности же сложившаяся структура организации требуют определения и уточнения дальнейших направлений развития.</p>
+            <p class="service-description__paragraph">С другой стороны начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий. Разнообразный и богатый опыт укрепление и развитие структуры требуют определения и уточнения модели развития.</p>
+          </div>
+          <div class="service-description__img-wrapper">
+            <img class="service-description__image" src="img/content/phones.png" alt="phones">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-news">
+      <h2 class="blog-news__header">Новые публикации в блоге</h2>
+      <div class="container">
+        <ul class="blog-news__links-list">
+          <li class="blog-news_item">
+            <a href="#" class="article-link">
+              <img src="img/news/post1.png" alt="img" class="article-link-img">
+              <i class="article-link__category">Личный опыт</i>
+              <b class="article-link__title">Как резко сменить профессию после 30 лет</b>
+              <p class="article-link__lead">Юрист, который стал стоматологом, диджей, который пошел учиться на пилота, и другие истории крутых поворотов.</p>
+            </a>
           </li>
-          <li class="workflow__phase">
-            <b class="workflow__phase-title">Посмотрите анкеты с отзывами и отправьте заявку</b>
-            <p class="workflow__phase-description">Уже через пару минут вы начнете получать предложения от исполнителей, готовых выполнить ваше задание.</p>
+          <li class="blog-news_item">
+            <a href="#" class="article-link">
+              <img src="img/news/post2.png" alt="img" class="article-link-img">
+              <i class="article-link__category">Лайфхак</i>
+              <b class="article-link__title">Сотрудники на удаленке — о том, как бороться с одиночеством</b>
+              <p class="article-link__lead">Люди, которые проводят жизнь в домашнем офисе, рассказывают, как им удается избежать изоляции и выгорания.</p>
+            </a>
           </li>
-          <li class="workflow__phase">
-            <b class="workflow__phase-title">Выберете наилучшее предложение</b>
-            <p class="workflow__phase-description">Вы сможете выбрать подходящего исполнителя, по разным критериям: Стоимость услуг, Отзывы заказчиков и рейтинг.</p>
+          <li class="blog-news_item">
+            <a href="#" class="article-link">
+              <img src="img/news/post3.png" alt="img" class="article-link-img">
+              <i class="article-link__category">Предприниматели</i>
+              <b class="article-link__title">5 вдохновляющих историй от создателей успешных компаний</b>
+              <p class="article-link__lead">В прошедшем году мы встретились с несколькими основателями известных брендов, которые рассказали нам...</p>
+            </a>
           </li>
         </ul>
       </div>
-    </div>
-  </div>
-</section>
+      <a href="#" class="blog-news__show-link">Посмотреть все публикации</a>
+    </section>
 
-<section class="advantages">
-  <h2 class="advantages__header">Приемущества нашего сервиса</h2>
-  <ul class="advantages__list">
-    <li class="advantages__item advantages__item--walet">
-      <b class="advantages__advantage-title">Экономия финансов и времени</b>
-      <p class="advantages__advantage-description">Пользуйтесь сервисом на своих мобильных устройствах Создавайте задания и подбирайте мастеров из любой точки мира.</p>
-    </li>
-    <li class="advantages__item advantages__item--messages">
-      <b class="advantages__advantage-title">Мгновенные уведомления</b>
-      <p class="advantages__advantage-description">Идейные соображения высшего порядка, а также сложившаяся структура организации обеспечивает широкому кругу.</p>
-    </li>
-    <li class="advantages__item advantages__item--envelope">
-      <b class="advantages__advantage-title">Достоверные отзывы</b>
-      <p class="advantages__advantage-description">Не следует, однако забывать, что рамки и место обучения кадров позволяет выполнять важные задания по разработке форм развития.</p>
-    </li>
-    <li class="advantages__item advantages__item--hands">
-      <b class="advantages__advantage-title">Отличные результаты</b>
-      <p class="advantages__advantage-description">Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности играет важную роль.</p>
-    </li>
-  </ul>
-</section>
+    <section class="get-jobs">
+      <h2 class="get-jobs__header">Теперь работа сама вас найдет!</h2>
+      <b class="get-jobs__sub-header">вы сами определяете условия и расценки</b>
+      <button type="button" class="button button--center">Стать исполнителем</button>
+    </section>
 
-<section class="service-description">
-  <div class="container">
-    <div class="row">
-      <div class="service-description__content-wrapper"> 
-        <h2 class="service-description__header">Пользуйтесь сервисом на своих мобильных устройствах</h2>
-        <p class="service-description__paragraph">Разнообразный и богатый опыт новая модель организационной деятельности влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Задача организации, в особенности же сложившаяся структура организации требуют определения и уточнения дальнейших направлений развития.</p>
-        <p class="service-description__paragraph">С другой стороны начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий. Разнообразный и богатый опыт укрепление и развитие структуры требуют определения и уточнения модели развития.</p>
-      </div>
-      <div class="service-description__img-wrapper">
-        <img class="service-description__image" src="img/content/phones.png" alt="phones">
-      </div>
-    </div>
-  </div>
-</section>
+    <footer class="footer">
+      <nav class="footer__navigation">
+        <div class="container">
+          <div class="row">
 
-<section class="blog-news">
-  <h2 class="blog-news__header">Новые публикации в блоге</h2>
-  <div class="container">
-    <ul class="blog-news__links-list">
-      <li class="blog-news_item">
-        <a href="#" class="article-link">
-          <img src="img/news/post1.png" alt="img" class="article-link-img">
-          <i class="article-link__category">Личный опыт</i>
-          <b class="article-link__title">Как резко сменить профессию после 30 лет</b>
-          <p class="article-link__lead">Юрист, который стал стоматологом, диджей, который пошел учиться на пилота, и другие истории крутых поворотов.</p>
-        </a>
-      </li>
-      <li class="blog-news_item">
-        <a href="#" class="article-link">
-          <img src="img/news/post2.png" alt="img" class="article-link-img">
-          <i class="article-link__category">Лайфхак</i>
-          <b class="article-link__title">Сотрудники на удаленке — о том, как бороться с одиночеством</b>
-          <p class="article-link__lead">Люди, которые проводят жизнь в домашнем офисе, рассказывают, как им удается избежать изоляции и выгорания.</p>
-        </a>
-      </li>
-      <li class="blog-news_item">
-        <a href="#" class="article-link">
-          <img src="img/news/post3.png" alt="img" class="article-link-img">
-          <i class="article-link__category">Предприниматели</i>
-          <b class="article-link__title">5 вдохновляющих историй от создателей успешных компаний</b>
-          <p class="article-link__lead">В прошедшем году мы встретились с несколькими основателями известных брендов, которые рассказали нам...</p>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <a href="#" class="blog-news__show-link">Посмотреть все публикации</a>
-</section>
+            <section class="footer__section">
+              <h2 class="footer__list-title">Инфо</h2>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Как это работает</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Как стать исполнителем</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Как пополнить счет</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Как стать заказчиком</a>
+                </li>
+              </ul>
+            </section>
 
-<section class="get-jobs">
-  <h2 class="get-jobs__header">Теперь работа сама вас найдет!</h2>
-  <b class="get-jobs__sub-header">вы сами определяете условия и расценки</b>
-  <button type="button" class="button button--center">Стать исполнителем</button>
-</section>
+            <section class="footer__section">
+              <h2 class="footer__list-title">Помощь</h2>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Правила сервиса</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Частые вопросы</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Наш блог</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Контакты</a>
+                </li>
+              </ul>
+            </section>
 
-<footer class="footer">
-  <nav class="footer__navigation">
-    <div class="container">
-      <div class="row">
+            <section class="footer__section">
+              <h2 class="footer__list-title">Меню</h2>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Создать задание</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Все задания</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Исполнители</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Стать исполнителем</a>
+                </li>
+              </ul>
+            </section>
 
-        <section class="footer__section">
-          <h2 class="footer__list-title">Инфо</h2>
-          <ul class="footer__list">
-            <li class="footer__item">
-              <a href="#" class="footer__link">Как это работает</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Как стать исполнителем</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Как пополнить счет</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Как стать заказчиком</a>
-            </li>
-          </ul>
-        </section>
+            <div class="footer__contacts-info">
+              <a href="#" class="button button--red button-small-font support-button">Написать в службу поддержки</a>
 
-        <section class="footer__section">
-          <h2 class="footer__list-title">Помощь</h2>
-          <ul class="footer__list">
-            <li class="footer__item">
-              <a href="#" class="footer__link">Правила сервиса</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Частые вопросы</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Наш блог</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Контакты</a>
-            </li>
-          </ul>
-        </section>
+              <ul class="footer__social-links">
+                <li class="footer__social-item">
+                  <a href="#" class="footer__social-link footer__social-link--facebook">Facebook</a>
+                </li>
+                <li class="footer__social-item">
+                  <a href="#" class="footer__social-link footer__social-link--odnoklassniki">Одноклассники</a>
+                </li>
+                <li class="footer__social-item">
+                  <a href="#" class="footer__social-link footer__social-link--vkontakte">VK</a>
+                </li>
+              </ul>
 
-        <section class="footer__section">
-          <h2 class="footer__list-title">Меню</h2>
-          <ul class="footer__list">
-            <li class="footer__item">
-              <a href="#" class="footer__link">Создать задание</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Все задания</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Исполнители</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Стать исполнителем</a>
-            </li>
-          </ul>
-        </section>
-
-        <div class="footer__contacts-info">
-          <a href="#" class="button button--red button-small-font support-button">Написать в службу поддержки</a>
-
-          <ul class="footer__social-links">
-            <li class="footer__social-item">
-              <a href="#" class="footer__social-link footer__social-link--facebook">Facebook</a>
-            </li>
-            <li class="footer__social-item">
-              <a href="#" class="footer__social-link footer__social-link--odnoklassniki">Одноклассники</a>
-            </li>
-            <li class="footer__social-item">
-              <a href="#" class="footer__social-link footer__social-link--vkontakte">VK</a>
-            </li>
-          </ul>
-
-          <p class="footer__additoinal-info">Информация, опубликованная на данном сайте. Предназначена для любой аудитории, если иное не указано дополнительно в отношении отдельных материалов.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer__copyright">
-      <div class="container">
-        <div class="row">
-          <div class="footer__copyright-info">
-            <span class="footer__copyright-rights">Copyright 2018 Birzha.com | Все права защищены </span>
-            <b class="footer__development">Разработано <a href="#">"Xsort.md"</a></b>
+              <p class="footer__additoinal-info">Информация, опубликованная на данном сайте. Предназначена для любой аудитории, если иное не указано дополнительно в отношении отдельных материалов.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </nav>
-</footer>
-<a href="#page-wrapper" class="page-wrapper__scroll-button"></a>
-</div>
-<script src="libs/jquery-3.3.1.min.js"></script>
-<script src="libs/jquery-ui/jquery-ui.min.js"></script>
-<script src="js/script.js"></script>
+
+        <div class="footer__copyright">
+          <div class="container">
+            <div class="row">
+              <div class="footer__copyright-info">
+                <span class="footer__copyright-rights">Copyright 2018 Birzha.com | Все права защищены </span>
+                <b class="footer__development">Разработано <a href="#">"Xsort.md"</a></b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </footer>
+    <a href="#page-wrapper" class="page-wrapper__scroll-button"></a>
+  </div>
+  <script src="libs/jquery-3.3.1.min.js"></script>
+  <script src="libs/jquery-ui/jquery-ui.min.js"></script>
+  <script src="libs/bootsrap/javascripts/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

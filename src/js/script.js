@@ -1,5 +1,5 @@
 //SHOW AND HIDE memu and lists
-var showButton = $('.page-navigation__show-button');
+/*var showButton = $('.page-navigation__show-button');
 var showButtonDrop = $('.menu-section__dropdown-button');
 
 var sectionNonDrop = $('.menu-section').not('.menu-section--dropdown');
@@ -47,7 +47,7 @@ $(window).on('resize', function () {
     } 
   }
 });
-
+*/
 
 
 //SCROLL

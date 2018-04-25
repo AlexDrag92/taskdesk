@@ -1,0 +1,31 @@
+.user-section{
+  margin-top: 20px;
+}
+
+.user-section__change-lang{
+  display: inline-block;
+  margin-right: 20px;
+  color: $white;
+}
+
+.user-section__lang-item{
+  border: none;
+  background: none;
+
+  &--active{
+    font-weight: bold;
+    color: $color5;
+  }
+}
+
+@media (max-width: $screen-md-min - 1){
+  .navbar-right--custom{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .user-section{
+    margin-bottom: 30px;
+  }
+}
