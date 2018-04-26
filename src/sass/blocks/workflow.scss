@@ -13,9 +13,11 @@
 
  @include make-md-column(6);
  @include make-md-column-offset(0);
+ @include make-md-column-pull(6);
 
  @include make-lg-column-offset(0);
  @include make-lg-column(6);
+ @include make-lg-column-pull(6);
 
 
  font-size: 18px;
@@ -66,6 +68,7 @@ span{
 
 
 .workflow__phases{
+ z-index: 1;
  @include make-xs-column(10);
  @include make-xs-column-offset(1);
  
@@ -74,9 +77,11 @@ span{
 
  @include make-md-column(6);
  @include make-md-column-offset(0);
+ @include make-md-column-push(6);
 
- @include make-lg-column(5,0);
- @include make-lg-column-offset(.9);
+ @include make-lg-column(5);
+ @include make-lg-column-offset(1);
+ @include make-lg-column-push(6);
 }
 
 
@@ -86,6 +91,7 @@ span{
   font-size: 30px;
   font-family: 'Uni Neue Heavy';
   color: $color4;
+  text-align: center; 
 }
 
 .workflow-descriptin__list{
@@ -102,6 +108,17 @@ span{
   font-size: 18px;
   font-family: 'Uni Neue Heavy';
   color: $color4;
+  transition: all .5s;
+  
+  &:hover,
+  &:active{
+    color: $color3;
+    text-decoration: none;
+  }
+  &:focus{
+    color: $color4;
+    text-decoration: none;
+  }
 
   &::before{
     content: '';
@@ -114,13 +131,56 @@ span{
     width: 50px;
     height: 2px;
     background: $color5; 
+    transition: all .5s;
+  } 
+
+  &--red-line{
+   &::before{
+    width: 100px;
+    background: red;
+  }
+}
+
+@media (max-width: $screen-lg-min - 1){
+  &::before{
+    left: -5px;
+    width: 30px;
   }
 
   &--red-line{
-     &::before{
-      width: 100px;
-      background: red;
-     }
+   &::before{
+    left: -5px;
+    width: 45px;
+  }
+}
+}
+
+  @media (max-width: $screen-md-min - 1){
+    &::before{
+      left: -10px;
+      width: 20px;
+    }
+
+    &--red-line{
+       &::before{
+        left: -10px;
+        width: 30px;
+      }
+    }
+  }
+
+  @media (max-width: $screen-sm-min - 1){
+    &::before{
+      left: -1px;
+      width: 7px;
+    }
+
+    &--red-line{
+       &::before{
+        left: -5px;
+        width: 15px;
+      }
+    }
   }
 }
 
@@ -131,14 +191,23 @@ span{
 }
 
 @media (max-width: $screen-lg-min - 1){
-  .workflow__phase-title{
-    &::before{
-      content: none;
-    }
+  .workflow__header{
+    margin-bottom: 25px;
   }
 }
+
 @media (max-width: $screen-md-min - 1){
+
   .workflow__link{
     margin-bottom: 60px;
+  }
+}
+@media (max-width: $screen-sm-min - 1){
+  .workflow{
+    padding: 50px 0;
+    background-color: $color6;
+  }
+  .workflow__header{
+    margin-bottom: 30px;
   }
 }

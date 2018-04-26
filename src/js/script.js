@@ -60,3 +60,19 @@ scrollElement.click(function(e) {
   1000,
   ($(this.hash).offset().top != 0 ? 'easeOutBounce' : 'linear'));
 });
+
+
+//
+$('.workflow__phase-title').on('click', function (event) {
+  event.preventDefault();
+ 
+
+  if($(this).hasClass('workflow__phase-title--red-line') !== true){
+    $('.workflow__phase-title').removeClass('workflow__phase-title--red-line');
+    $(this).addClass('workflow__phase-title--red-line');
+    $('.workflow__image').attr('src', $(this).attr('href'));
+
+    console.log($('.workflow__image').attr('href'))
+  }
+
+})

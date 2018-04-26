@@ -5,13 +5,11 @@
 
 
 .footer__section{
-  @include make-xs-column(11);
+  @include make-xs-column(10);
   @include make-xs-column-offset(1);
   @include make-sm-column(4);
   @include make-sm-column-offset(0);
   @include make-lg-column(2);
-
-
 }
 
 .footer__list-title{
@@ -78,9 +76,14 @@
   height: 25px;
   background: 
   $color6
-  url('../img/icons/sprite.png');
+  url('../img/icons/sprite.png')
+  no-repeat;
   border-radius: 3px;
-
+  transition: background .4s;
+  
+  &:hover{
+    background-color: $color3;
+  }
 
   &--facebook{
     background-position: 5px -2208px; 
@@ -100,7 +103,6 @@
   margin-top: 40px;
   font-size: 13px;
 }
-
 
 .footer__copyright{
   margin-top: 60px;
@@ -123,8 +125,6 @@
   @include make-sm-column(6);
 }
 
-
-
 .footer__development{
   @include make-xs-column(11);
   @include make-sm-column(4);
@@ -145,22 +145,49 @@
 
 
 @media (max-width: $screen-sm-min - 1){
+  .footer__section{
+    border-bottom: 1px solid $color5;
+  }
+  
+  .footer__list-title{
+    margin-top: 30px;
+    text-align: center;    
+  }
+
+  .footer__item{
+    text-align: center;
+  }
+
   .footer__development{
     text-align: left;
   }
-}
+  .footer__contacts-info{
+    margin-top: 0;
+  }
 
-@media (max-width: $screen-xs-min - 1){
+  .support-button{
+    margin-top: 50px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .footer__social-links{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    margin-top: 15px;
+  }
+  .footer__social-link{
     display: block;
     margin-left: 0;
     margin-top: 30px;
     text-align: center;
   }
+}
 
-  .support-button{
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+@media (max-width: $screen-xs-min - 1){
+
+
+
 }

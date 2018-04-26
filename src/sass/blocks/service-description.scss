@@ -68,6 +68,16 @@
     width: auto;
     padding: 0;
   }
+
+  .service-description__header{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .service-description__img-wrapper{
+    margin-bottom: 30px;
+  }
+
 }
 
 @media (max-width: $screen-xs-min - 1){

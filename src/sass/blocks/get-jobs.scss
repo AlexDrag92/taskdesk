@@ -22,3 +22,13 @@
   margin-top: 65px;
   margin-bottom: 130px;
 }
+
+@media (max-width: $screen-sm-min - 1){
+  .get-jobs__header{
+    margin-top: 30px;
+  }
+  .get-jobs .button{
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+}

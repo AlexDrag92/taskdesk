@@ -24,7 +24,6 @@
   @include make-sm-column(4);
   @include make-lg-column(4);
   
-
 }
 
 .blog-news__show-link{
@@ -36,6 +35,7 @@
   font-size: 16px;
   color: $color1 ;
   text-decoration: underline;
+  
 
   
   &:hover{
@@ -45,6 +45,11 @@
 }
 
 @media (max-width: $screen-sm-min - 1){
+  .blog-news__header{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
   .blog-news__links-list{
     margin-bottom: 50px;
   }

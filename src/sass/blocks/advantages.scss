@@ -36,7 +36,7 @@
   }
 
   margin-bottom: 100px;
-  padding-left: 85px;
+  padding-left: 90px;
 
   background:
   url('../img/icons/sprite.png')
@@ -70,4 +70,24 @@
 .advantages__advantage-description{
   font-size: 16px;
   color: $color5;
+}
+
+@media (max-width: $screen-sm-min - 1){
+  .advantages__header{
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .advantages__item{
+    margin-bottom: 25px;
+  }
+
+  .advantages__advantage-title{
+    text-align: center;
+  }
+
+  .advantages__list{
+    padding-top: 0;
+    border: none;
+  }
 }

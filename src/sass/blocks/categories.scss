@@ -34,8 +34,10 @@
 }
 
 .categories__category{
-  @include make-xs-column(12);
+  @include make-xs-column(10);
+  @include make-xs-column-offset(1);
   @include make-sm-column(6);
+  @include make-sm-column-offset(0);
   @include make-md-column(6);
   @include make-lg-column(4);
   margin-bottom: 80px;
@@ -111,4 +113,16 @@
   padding-right: 0;
   padding-left: 0;
   text-align: center;
+}
+
+@media (max-width: $screen-sm-min - 1){
+  .categories__sub-header{
+    margin-bottom: 40px;
+  }
+  .categories__category{
+    margin-bottom: 20px;
+  }
+  .categories__button{
+    margin-bottom: 40px;
+  }
 }
