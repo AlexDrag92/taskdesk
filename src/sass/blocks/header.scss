@@ -1,5 +1,10 @@
 header{
-  background: $color1;
+ position: fixed;
+ top: 0;
+ width: 100%;
+ z-index: 2;
+ background: $color1;
+
 }
 .header__main-navbar{
   min-height: 80px;
@@ -64,8 +69,10 @@ header{
   no-repeat
   top left;
 }
+
 /*-----------BOOTSRAP 3 REASSIGN ELEMENT- .header__dropdown-button-----------*/
 $header__dropdown-button: ".header__collapse-section > .navbar-nav > li > a.header__dropdown-button";
+
 #{$header__dropdown-button}{
   padding: 0;
   background-color: transparent;
@@ -75,22 +82,46 @@ $header__dropdown-button: ".header__collapse-section > .navbar-nav > li > a.head
     background-color: transparent;
   }
 }
+
+
+$header__dropdown-list: ".navbar-nav>li>.dropdown-menu.header__dropdown-list";
+
+#{$header__dropdown-list}{
+  border-radius: 6px;
+  
+}
 /*---------------------------------------------------*/
 .header__dropdown-list{
-  background: $color1;
+  top: 70px;
+  left: -15px;
+  padding-bottom: 10px;
+  background: $color4;
   border: none;
   box-shadow: none;
+
+  &::before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    display: block;
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent $color4 transparent;
+
+  }
 }
 .header__collapse-link{
   margin-top: 30px;
   font-size: 14px;
-  //color: #FFFFFF !important;
   text-decoration: none;
   transition: color .3s;
+
 }
-.navbar-nav>li>a.header__collapse-link{
- // display: none;
-}
+
 $header__collapse-link: ".header__collapse-list>li>a.header__collapse-link, .header__collapse-list .dropdown-menu li a.header__collapse-link";
 #{$header__collapse-link}{
   padding: 0;
@@ -144,6 +175,17 @@ $header__collapse-link: ".header__collapse-list>li>a.header__collapse-link, .hea
   #{$header__collapse-link}{
     &--padding-left{
       padding-left: 0px;
+    }
+  }
+  .header__dropdown-list{
+    top: 0px;
+    left: 0px;
+    padding-bottom: 0px;
+    background: $color1;
+   
+
+    &::before{
+      content: none;
     }
   }
 }

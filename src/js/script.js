@@ -58,14 +58,14 @@ scrollElement.click(function(e) {
     scrollTop: $(this.hash).offset().top
   },
   1000,
-  ($(this.hash).offset().top != 0 ? 'easeOutBounce' : 'linear'));
+  ($(this.hash).offset().top != 0 ? 'easeOutQuad' : 'linear'));
 });
 
 
 //
 $('.workflow__phase-title').on('click', function (event) {
   event.preventDefault();
- 
+  
 
   if($(this).hasClass('workflow__phase-title--red-line') !== true){
     $('.workflow__phase-title').removeClass('workflow__phase-title--red-line');
@@ -75,4 +75,12 @@ $('.workflow__phase-title').on('click', function (event) {
     console.log($('.workflow__image').attr('href'))
   }
 
-})
+});
+
+$('.dropdown').on('show.bs.dropdown', function() {
+  $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+});
+
+$('.dropdown').on('hide.bs.dropdown', function() {
+  $(this).find('.dropdown-menu').first().stop(true, true).hide();
+});
