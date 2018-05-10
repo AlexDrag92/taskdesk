@@ -63,17 +63,24 @@ scrollElement.click(function(e) {
 
 
 //
+
 $('.workflow__phase-title').on('click', function (event) {
   event.preventDefault();
-  
+})
 
-  if($(this).hasClass('workflow__phase-title--red-line') !== true){
+$('.workflow__phase').on('click', function (event) {
+  var curentElement = this.querySelector('.workflow__phase-title').hasClass('');
+  console.log(curentElement);
+
+
+
+ /* if($(this).hasClass('workflow__phase-title--red-line') !== true){
     $('.workflow__phase-title').removeClass('workflow__phase-title--red-line');
     $(this).addClass('workflow__phase-title--red-line');
     $('.workflow__image').attr('src', $(this).attr('href'));
 
     console.log($('.workflow__image').attr('href'))
-  }
+  }*/
 
 });
 

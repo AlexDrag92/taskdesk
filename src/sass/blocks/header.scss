@@ -88,14 +88,16 @@ $header__dropdown-list: ".navbar-nav>li>.dropdown-menu.header__dropdown-list";
 
 #{$header__dropdown-list}{
   border-radius: 6px;
+  padding-bottom: 20px;
   
 }
 /*---------------------------------------------------*/
 .header__dropdown-list{
+  width: auto;
   top: 70px;
-  left: -15px;
+  left: -30px;
   padding-bottom: 10px;
-  background: $color4;
+  background: $white;
   border: none;
   box-shadow: none;
 
@@ -103,18 +105,20 @@ $header__dropdown-list: ".navbar-nav>li>.dropdown-menu.header__dropdown-list";
     content: '';
     position: absolute;
     top: -10px;
-    left: 15px;
+    left: 30px;
     display: block;
 
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 0 10px 10px 10px;
-    border-color: transparent transparent $color4 transparent;
+    border-color: transparent transparent $white transparent;
 
   }
 }
 .header__collapse-link{
+  display: block;
+  width: 100%;
   margin-top: 30px;
   font-size: 14px;
   text-decoration: none;
@@ -125,12 +129,14 @@ $header__dropdown-list: ".navbar-nav>li>.dropdown-menu.header__dropdown-list";
 $header__collapse-link: ".header__collapse-list>li>a.header__collapse-link, .header__collapse-list .dropdown-menu li a.header__collapse-link";
 #{$header__collapse-link}{
   padding: 0;
-  color: #FFFFFF;
-  &--padding-left{
-    padding-left: 10px;
+  color: $white;
+  &--dropdown-link{
+    color: $color1;
+    padding-left: 30px;
+    margin-top: 18px;
   }
   &:hover{
-    color: $color2;
+    color: $color3;
     background: transparent;
   }
 }
@@ -158,8 +164,9 @@ $header__collapse-link: ".header__collapse-list>li>a.header__collapse-link, .hea
   }
   .header__collapse-item{
     margin-right: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
+
+    padding-top: 0px;
+    padding-bottom: 0px;
     &--dropdown{
       padding: 0;
     }
@@ -173,13 +180,19 @@ $header__collapse-link: ".header__collapse-list>li>a.header__collapse-link, .hea
     font-size: 16px;
   }
   #{$header__collapse-link}{
-    &--padding-left{
-      padding-left: 0px;
+     padding-left: 0px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    
+    &--dropdown-link{
+      margin-top: 0;
+      color: $white;
     }
   }
-  .header__dropdown-list{
+  #{$header__dropdown-list}{
     top: 0px;
     left: 0px;
+    padding-bottom: 0;
     padding-bottom: 0px;
     background: $color1;
    
