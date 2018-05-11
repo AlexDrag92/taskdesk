@@ -69,12 +69,21 @@ $('.workflow__phase-title').on('click', function (event) {
 })
 
 $('.workflow__phase').on('click', function (event) {
-  var curentElement = this.querySelector('.workflow__phase-title').hasClass('');
-  console.log(curentElement);
+  var curentTitle = $(this).find('.workflow__phase-title');
+
+
+  if(!curentTitle.hasClass('workflow__phase-title--red-line')){
+   $('.workflow__phase-title').removeClass('workflow__phase-title--red-line');
+   curentTitle.addClass('workflow__phase-title--red-line');
+   $('.workflow__image').attr('src', curentTitle.attr('href'));
+ }
+
+})
+  //console.log(curentTitle.hasClass('workflow__phase-title--red-line'));
 
 
 
- /* if($(this).hasClass('workflow__phase-title--red-line') !== true){
+  /*if($(this).hasClass('workflow__phase-title--red-line') !== true){
     $('.workflow__phase-title').removeClass('workflow__phase-title--red-line');
     $(this).addClass('workflow__phase-title--red-line');
     $('.workflow__image').attr('src', $(this).attr('href'));
@@ -82,12 +91,12 @@ $('.workflow__phase').on('click', function (event) {
     console.log($('.workflow__image').attr('href'))
   }*/
 
-});
+//});
 
-$('.dropdown').on('show.bs.dropdown', function() {
-  $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
-});
+    $('.dropdown').on('show.bs.dropdown', function() {
+      $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+    });
 
-$('.dropdown').on('hide.bs.dropdown', function() {
-  $(this).find('.dropdown-menu').first().stop(true, true).hide();
-});
+    $('.dropdown').on('hide.bs.dropdown', function() {
+      $(this).find('.dropdown-menu').first().stop(true, true).hide();
+    });

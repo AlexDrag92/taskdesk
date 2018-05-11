@@ -1,6 +1,16 @@
 .workflow{
   padding: 130px 0;
   background-color: $color6;
+
+}
+
+.workflow__phase{
+  &:hover{
+    .workflow__phase-title,
+    .workflow__phase-description{
+      color: $color3;
+    }
+  }
 }
 
 .workflow__link{
@@ -192,6 +202,7 @@ span{
   margin-bottom: 30px;
   font-size: 16px;
   color: $color5;
+  transition: all .5s; 
 }
 
 @media (max-width: $screen-lg-min - 1){

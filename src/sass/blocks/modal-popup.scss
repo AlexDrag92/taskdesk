@@ -1,0 +1,174 @@
+.modal-popup{
+	position: absolute;
+	top: 180px;
+	left: 50%;
+	width: 370px;
+	transform: translate(-50%);
+	background-color: $white;
+	border-radius: 5px;
+	border: 1px solid #000;
+
+	
+}
+
+
+.modal-popup__title{
+	position: relative;
+	margin-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 15px;
+	font-weight: bold;
+	font-size: 15px;
+	border-bottom: 1px solid lighten($color4, 60%);
+}
+
+.modal-popup__close-button{
+	position: absolute;
+	top: 22px;
+	right: 20px;
+	width: 10px;
+	height: 10px;
+	border: none;
+	background: none;
+
+	&::before, &::after{
+		content: "";
+		position: absolute;
+		top: 0px;
+		display: block;
+		width: 3px;
+		height: 12px;
+		background:  lighten($color4, 50%);
+		border-radius: 50px;
+		transform: rotate(-45deg);
+	}
+
+	&::after{
+		transform: rotate(45deg);
+	}
+}
+
+
+.modal-popup__form{
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.modal-popup__label{
+	display: block;
+	width: 100%;
+	margin-top: 25px;
+	font-size: 14px;
+	color: lighten($color5, 20%);
+}
+
+.modal-popup__input{
+	display: block;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 50px;
+	background: #F1F2F7;
+	background-repeat: no-repeat;
+		background-position: 15px center;
+	border: 1px solid lighten($color5, 40%);
+	border-radius: 4px;
+	outline: none;
+
+	&:focus{
+		background: $white;
+		transition: all, .1s;
+		box-shadow: 0px 5px 20px #DDDDDD;
+	}
+
+	&--email{
+		background-image:url('../img/icons/close-envelope.png');
+	}
+	&--password{
+		background-image:url('../../img/icons/locked-padlock.png');
+	}
+}
+
+.modal-popup__input::placeholder{
+	font-weight: bold;
+	color: #000000;
+	
+}
+
+.modal-popup__agree-paragraph{
+	margin-top: 40px;
+}
+
+.modal-popup__agree-checkbox{
+	display: none;
+}
+
+.modal-popup__fake-agree-checkbox{
+	vertical-align: top;
+
+	display: inline-block;
+	background-color: $color3;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	border-radius: 4px;
+}
+
+.modal-popup__agree-link{
+	color: $color2;
+	transition: color .1s;
+	
+	&:hover{
+		color: $color3;
+		text-decoration: none;
+	}
+
+}
+
+.modal-popup__agree-checkbox:checked+.modal-popup__fake-agree-checkbox{
+	background: gold; 
+}
+
+.modal-popup .button{
+	margin-top: 70px;
+}
+
+.modal-popup__or-separator{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	margin: 25px 40px 0;
+	text-align: center;
+	
+	&::before{
+		content: '';
+		position: absolute;
+		top: 50%;
+
+		display: block;
+		width: 100%;
+		height: 1px;
+		background-color: lighten($color4, 50%);
+		z-index: -1;
+	}
+
+	span{
+		background: $white;
+		padding: 0 10px;
+		color: lighten($color4, 50%);
+	}
+}
+
+.modal-popup__account-link{
+	display: block;
+	margin-top: 25px;
+	margin-bottom: 45px;
+	text-align: center;
+	font-weight: bold;
+	color: $color2;
+	transition: color, .2s;
+	&:hover{
+		color: $color3;
+		text-decoration: none;
+	}
+}

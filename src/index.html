@@ -384,13 +384,43 @@
     <a href="#page-wrapper" class="page-wrapper__scroll-button"></a>
   </div>
 
-  <div class="modal-form">
-    <form action="POST">
-      <input type="text">
-      <input type="password">
-      <button type="submit"></button>
+  <!--div class="modal-popup">
+    <h1 class="modal-popup__title">Быстрая регистрация</h1>
+    <button type="button" class="modal-popup__close-button"></button>
+    <form action="POST" class="modal-popup__form">
+      <label for="modal-popup__email" class="modal-popup__label">E-mail</label>
+      <input type="email" placeholder="youremail@email.com" class="modal-popup__input" id="modal-popup__email">
+      
+      <label class="modal-popup__agree-paragraph">  <input type="checkbox" class="modal-popup__agree-checkbox"><span class="modal-popup__fake-agree-checkbox"></span> Я согласен с <a href="#" class="modal-popup__agree-link">Правилами сервиса</a></label>
+      <button type="submit" class="button button--full-width">Зарегистрироваться</button>
     </form>
+    <div class="modal-popup__or-separator">
+      <span>Или</span>
+    </div>
+    <a href="#" class="modal-popup__account-link">Войти в существущий аккаунт</a>
+  </div-->
+
+
+  
+    <div class="modal-popup">
+    <h1 class="modal-popup__title">Войти в свой аккаунт</h1>
+    <button type="button" class="modal-popup__close-button"></button>
+    <form action="POST" class="modal-popup__form">
+      <label for="modal-popup__email-acc" class="modal-popup__label">E-mail</label>
+      <input type="email" placeholder="youremail@email.com" class="modal-popup__input modal-popup__input--email" id="modal-popup__email-acc">
+      
+      <label for="modal-popup__password" class="modal-popup__label">Пароль</label>
+      <input type="password" placeholder="&#9679; &#9679; &#9679; &#9679; &#9679; &#9679;" class="modal-popup__input modal-popup__input--password" id="modal-popup__password">
+  
+      <button type="submit" class="button button--full-width">Войти в свой аккаунт</button>
+    </form>
+    <div class="modal-popup__or-separator">
+      <span>Или</span>
+    </div>
+    <a href="#" class="modal-popup__account-link">Забыли пароль?</a>
   </div>
+
+
   <script src="libs/jquery-3.3.1.min.js"></script>
   <script src="libs/jquery-ui/jquery-ui.min.js"></script>
   <script src="libs/bootsrap/javascripts/bootstrap.min.js"></script>
