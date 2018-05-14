@@ -77,7 +77,12 @@
 
 
 .search-form__submit-button-wrapper{
+  @include make-sm-column(6);
+  @include make-sm-column-offset(3);
+  @include make-md-column(4);
+  @include make-md-column-offset(-2);
   @include make-lg-column(2);
+  @include make-lg-column-offset(0);
 }
 
 

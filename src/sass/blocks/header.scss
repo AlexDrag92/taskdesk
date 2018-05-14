@@ -1,10 +1,9 @@
-header{
- position: fixed;
+.header{
+ position: absolute;
  top: 0;
  width: 100%;
- z-index: 2;
+ z-index: 1;
  background: $color1;
-
 }
 .header__main-navbar{
   min-height: 80px;
@@ -124,6 +123,8 @@ $header__dropdown-list: ".navbar-nav>li>.dropdown-menu.header__dropdown-list";
   text-decoration: none;
   transition: color .3s;
 
+
+
 }
 
 $header__collapse-link: ".header__collapse-list>li>a.header__collapse-link, .header__collapse-list .dropdown-menu li a.header__collapse-link";
@@ -139,7 +140,19 @@ $header__collapse-link: ".header__collapse-list>li>a.header__collapse-link, .hea
     color: $color3;
     background: transparent;
   }
+   &:focus{
+    background: transparent;
+    outline: none; 
+  }
 }
+
+.user-section__enter-registration{
+  &:focus{
+    color: $white;
+    text-decoration: none;
+  }
+}
+
 @media (max-width: $screen-lg-min - 1){
   .header__logo{
     margin-right: 30px;
@@ -159,6 +172,12 @@ $header__collapse-link: ".header__collapse-list>li>a.header__collapse-link, .hea
   }
 }
 @media (max-width: $screen-sm-min - 1){
+
+  .header{
+    overflow-y:hidden;
+    overflow-x:hidden;
+  }
+
   .header__dropdown-button{
     margin-top: 0;
   }
@@ -172,7 +191,6 @@ $header__collapse-link: ".header__collapse-list>li>a.header__collapse-link, .hea
     }
     &--mobile-underline{
       width: 100%;
-      border-bottom: 2px solid $color3;
     }
   }
   .header__collapse-link{

@@ -76,7 +76,7 @@
                     /
                     <button class="user-section__lang-item">Ro</button>
                   </div>
-                  <button class="button button--small-font user-section__enter-registration">Вход или Регистрация</button>
+                  <a href="#" class="button button--small-font user-section__enter-registration" id="enter-registration-button">Вход или Регистрация</a href="#">
                 </div>
               </li>
             </ul>
@@ -384,12 +384,12 @@
     <a href="#page-wrapper" class="page-wrapper__scroll-button"></a>
   </div>
 
-  <!--div class="modal-popup">
+  <div class="modal-popup" id="registration">
     <h1 class="modal-popup__title">Быстрая регистрация</h1>
     <button type="button" class="modal-popup__close-button"></button>
     <form action="POST" class="modal-popup__form">
       <label for="modal-popup__email" class="modal-popup__label">E-mail</label>
-      <input type="email" placeholder="youremail@email.com" class="modal-popup__input" id="modal-popup__email">
+      <input type="email" placeholder="youremail@email.com" class="modal-popup__input modal-popup__input--email" id="modal-popup__email">
       
       <label class="modal-popup__agree-paragraph">  <input type="checkbox" class="modal-popup__agree-checkbox"><span class="modal-popup__fake-agree-checkbox"></span> Я согласен с <a href="#" class="modal-popup__agree-link">Правилами сервиса</a></label>
       <button type="submit" class="button button--full-width">Зарегистрироваться</button>
@@ -397,12 +397,12 @@
     <div class="modal-popup__or-separator">
       <span>Или</span>
     </div>
-    <a href="#" class="modal-popup__account-link">Войти в существущий аккаунт</a>
-  </div-->
+    <a href="#" class="modal-popup__account-link" id="modal-popup__account-link">Войти в существущий аккаунт</a>
+  </div>
 
 
   
-    <div class="modal-popup">
+    <div class="modal-popup" id="account-popup">
     <h1 class="modal-popup__title">Войти в свой аккаунт</h1>
     <button type="button" class="modal-popup__close-button"></button>
     <form action="POST" class="modal-popup__form">
@@ -419,6 +419,7 @@
     </div>
     <a href="#" class="modal-popup__account-link">Забыли пароль?</a>
   </div>
+  <div class="overlay"></div>
 
 
   <script src="libs/jquery-3.3.1.min.js"></script>

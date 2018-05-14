@@ -74,6 +74,11 @@
 }
 
 @media (max-width: $screen-md-min - 1){
+
+  .jumbotron-page_main-page-header{
+    margin-top: 120px;
+  }
+
   .jumbotron-page__arrow-down{
     margin-top: 60px;
     margin-bottom: 60px;

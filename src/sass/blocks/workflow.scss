@@ -78,7 +78,7 @@ span{
 
 
 .workflow__phases{
- z-index: 1;
+// z-index: 1;
  @include make-xs-column(10);
  @include make-xs-column-offset(1);
  

@@ -143,6 +143,16 @@
 }
 
 
+@media (max-width: $screen-lg-min - 1){
+  .footer__contacts-info{
+    text-align: center;
+  }
+
+  .footer__additoinal-info{
+    text-align: left;
+  }
+}
+
 
 @media (max-width: $screen-sm-min - 1){
   .footer__section{
@@ -163,6 +173,7 @@
   }
   .footer__contacts-info{
     margin-top: 0;
+    text-align: left;
   }
 
   .support-button{
