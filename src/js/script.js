@@ -168,4 +168,15 @@ overlay.on('click', function(){
 });
 
 
-//console.log($(document).height()+'px')
+//Debug dropdown user
+var menuButton = $('.header__toggle-menu-button');
+
+menuButton.on('click', function(){
+  if($(this).hasClass('collapsed')){
+    setTimeout(function(){
+      $('.header__collapse-section').css('overflow', 'visible');
+    }, 1000);
+  }else{
+    $('.header__collapse-section').css('overflow', 'hidden');
+  }
+});

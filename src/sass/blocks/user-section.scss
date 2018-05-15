@@ -164,9 +164,24 @@ $user-section__dropdown-link: ".header .dropdown-menu > li > a.user-section__dro
   padding: 10px;
   padding-left: 40px;
   color: $color1;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+  
+  &--user{
+  	background-image: url('../img/icons/user.png');
+  }
+  &--settings{
+  	background-image: url('../img/icons/settings-work-tool.png');
+  }
+  &--mail{
+  	background-image: url('../img/icons/envelope-u.png');
+  }
+  &--exit{
+  	background-image: url('../img/icons/exit-to-app-button.png');
+  }
 
   &:hover{
-    color: $color3;
+  	color: $color2;
   }
 }
 

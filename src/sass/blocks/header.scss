@@ -46,6 +46,8 @@
 .header__collapse-elements{
 
 }
+
+
 .header__collapse-section{
   box-shadow: none;
 }
@@ -173,11 +175,6 @@ $header__collapse-link: ".header__collapse-list>li>a.header__collapse-link, .hea
 }
 @media (max-width: $screen-sm-min - 1){
 
-  .header{
-    overflow-y:hidden;
-    overflow-x:hidden;
-  }
-
   .header__dropdown-button{
     margin-top: 0;
   }
@@ -199,8 +196,8 @@ $header__collapse-link: ".header__collapse-list>li>a.header__collapse-link, .hea
   }
   #{$header__collapse-link}{
      padding-left: 0px;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
     
     &--dropdown-link{
       margin-top: 0;
