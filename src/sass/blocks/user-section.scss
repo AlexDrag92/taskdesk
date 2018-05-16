@@ -50,6 +50,25 @@
   display: inline-block;
 }
 
+.user-section__user-info{
+  display: inline-block;
+
+  &:hover{
+    .user-section__user-name{
+      text-decoration: none;
+      color: $color2;
+    }
+  }
+
+
+  &:focus{
+    background-color: transparent;
+    .user-section__dropdown-button-img{
+      transform: rotate(-180deg)
+    }
+  }
+}
+
 .user-section__user-avatar-wrapper{
   display: inline-block;
   vertical-align: middle;
@@ -91,14 +110,6 @@
 $user-section__dropdown-button: ".header .nav .open>a, .nav .open>a:focus, .nav .open>a.user-section__dropdown-button";
 #{$user-section__dropdown-button}{
   background-color: transparent;
-
-  &:focus{
-    background-color: transparent;
-
-    .user-section__dropdown-button-img{
-      transform: rotate(-180deg)
-    }
-  }
 }
 
 .user-section__dropdown-button-img{
@@ -164,8 +175,8 @@ $user-section__dropdown-link: ".header .dropdown-menu > li > a.user-section__dro
   padding: 10px;
   padding-left: 40px;
   color: $color1;
-	background-repeat: no-repeat;
-	background-position: 10px center;
+  background-repeat: no-repeat;
+  background-position: 10px center;
   
   &--user{
   	background-image: url('../img/icons/user.png');

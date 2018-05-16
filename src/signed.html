@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>TaskDesk</title>
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  <link href="favicon.ico" rel="shortcut icon" type="image/ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="favicon.ico" rel="shortcut icon" type="image/ico">
   <link rel="stylesheet" href="css/style.css">
+  <script  type="text/javascript" src="libs/jquery-3.3.1.min.js"></script>
 </head>
 <body>
   <div id="page-wrapper" class="page-wrapper">
@@ -75,13 +77,18 @@
                     <span class="user-section__mail-number">4</span>
                   </a>
                   <div class="user-section__user-block">
-                    <div class="user-section__user-avatar-wrapper">
-                      <img src="img/avatars/mini/butters.jpg" alt="" class="user-section__user-avatar">
-                    </div>
-                    <a href="#" class="user-section__user-name">Сергей Денисов</a>
-                    <a href="#" class="user-section__dropdown-button dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                      <img src="img/icons/down-chevron.png" alt="dropdown" class="user-section__dropdown-button-img">
+
+                    <a href="#" class="user-section__user-info dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      <div class="user-section__user-avatar-wrapper">
+                        <img src="img/avatars/mini/butters.jpg" alt="" class="user-section__user-avatar">
+                      </div>
+                      <span class="user-section__user-name">Сергей Денисов</span>
+
+                      <span class="user-section__dropdown-button">
+                        <img src="img/icons/down-chevron.png" alt="dropdown" class="user-section__dropdown-button-img">
+                      </span>
                     </a>
+
                     <ul class="dropdown-menu user-section__dropdown-list">
                       <li class="user-section__dropdown-item">
                         <a href="#" class="user-section__dropdown-link user-section__dropdown-link--user">Профиль</a>
@@ -118,9 +125,9 @@
 
 
 
-  <script src="libs/jquery-3.3.1.min.js"></script>
-  <script src="libs/jquery-ui/jquery-ui.min.js"></script>
-  <script src="libs/bootsrap/javascripts/bootstrap.min.js"></script>
-  <script src="js/script.js"></script>
+  <script  type="text/javascript" src="libs/jquery-3.3.1.min.js"></script>
+  <script  type="text/javascript" src="libs/jquery-ui/jquery-ui.min.js"></script>
+  <script  type="text/javascript" src="libs/bootsrap/javascripts/bootstrap.min.js"></script>
+  <script  type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
