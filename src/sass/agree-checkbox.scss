@@ -1,0 +1,36 @@
+.agree-checkbox-label{
+
+
+}
+
+.agree-checkbox__input{
+	display: none;
+}
+
+.agree-checkbox__pseudo-input{
+	vertical-align: top;
+	display: inline-block;
+	background-color: $color3;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.agree-checkbox__text{
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.agree-checkbox__link{
+	font-family: inherit;
+	font-size: inherit;
+	
+}
+
+.agree-checkbox__input:checked+.agree-checkbox__pseudo-input{
+	background-image: url('../img/icons/tick.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
