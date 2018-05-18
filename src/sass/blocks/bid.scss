@@ -1,0 +1,102 @@
+.bid{
+	padding-top: 50px;
+}
+
+.bid__form{
+	@include make-row();
+
+	outline: 1px solid pink;
+}
+
+
+.bid [class*="wrapper"]{
+	outline: 1px solid royalblue;
+}
+
+
+
+.bid__i-need-wrapper{
+	@include make-lg-column(4);
+	@include make-lg-column-offset(1);
+}
+
+.bid__category-wrapper{
+	@include make-lg-column(3);
+}
+
+.bid__sub-category-wrapper{
+	@include make-lg-column(3);
+}
+
+.bid__description-wrapper{
+	@include make-lg-column(7);
+	@include make-lg-column-offset(1);
+}
+
+.bid__dragfile-area-wrapper{
+	@include make-lg-column(3);
+}
+
+.bid__budget-wrapper{
+	@include make-lg-column(2);
+	@include make-lg-column-offset(1);
+}
+
+.bid__treaty-wrapper{
+	@include make-lg-column(2);
+}
+
+.bid__period-wrapper{
+	@include make-lg-column(2);
+}
+
+.bid__start-wrapper{
+	@include make-lg-column(2);
+}
+
+.bid__finish-wrapper{
+	@include make-lg-column(2);
+}
+
+
+.bid__index-wrapper{
+	@include make-lg-column(2);
+	@include make-lg-column-offset(1);
+}
+
+.bid__city-wrapper{
+	@include make-lg-column(3);
+}
+
+.bid__address-wrapper{
+	@include make-lg-column(5);
+}
+
+.bid__contacts-title{
+	outline: 1px solid gold;
+	@include make-lg-column(10);
+	@include make-lg-column-offset(1);
+}
+
+.bid__name-wrapper{
+	@include make-lg-column(4);
+	@include make-lg-column-offset(1);
+}
+
+.bid__phone-wrapper{
+	@include make-lg-column(3);
+}
+
+.bid__email-wrapper{
+	@include make-lg-column(3);
+}
+
+
+.bid__agreement-wrapper{
+	@include make-lg-column(4);
+	@include make-lg-column-offset(1);
+}
+
+.bid__submit-button-wrapper{
+	@include make-lg-column(6);
+}
