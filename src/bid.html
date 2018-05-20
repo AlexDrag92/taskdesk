@@ -7,12 +7,13 @@
   <title>TaskDesk</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="favicon.ico" rel="shortcut icon" type="image/ico">
+  <link rel="stylesheet" href="http://trentrichardson.com/examples/timepicker/jquery-ui-timepicker-addon.css">
+  <link rel="stylesheet" href="libs/jquery-ui/jquery-ui-timepicker-addon.css">
   <link rel="stylesheet" href="css/style.css">
-  <script  type="text/javascript" src="libs/jquery-3.3.1.min.js"></script>
 </head>
 <body>
   <div id="page-wrapper" class="page-wrapper">
-        <header class="header">
+    <header class="header">
       <div class="container">
         <nav class="header__main-navbar  row navbar">
           <div class="header__navbar-header  navbar-header">
@@ -120,22 +121,23 @@
     <div class="rubric-jumbotron">
       <div class="container">
 
-          <h1 class="rubric-jumbotron__title">Заполните заявку</h1>
-          <b class="rubric-jumbotron__subtitle">Нужно прибить полку, повесть люстру или что-то другое по мелкому ремонту?</b>
+        <h1 class="rubric-jumbotron__title">Заполните заявку</h1>
+        <b class="rubric-jumbotron__subtitle">Нужно прибить полку, повесть люстру или что-то другое по мелкому ремонту?</b>
 
       </div>
     </div>
 
     <div class="bid">
-      <div class="container">
+      <div class="w">
 
-          <form action="#" method="POST" class="bid__form">
+        <form action="#" method="POST" class="container bid__form">
 
+
+          <div class="bid__group-elements">
             <div class="bid__i-need-wrapper">
               <label for="" class="bid__input-label">Мне нужно*</label>
               <input type="text" class="bid__i-need-input bid__form-element-style" placeholder="Сделать">
             </div>
-
             <div class="bid__category-wrapper">
               <label for="" class="bid__input-label">Категория*</label>
               <select name="" id="" class="bud__select-category bid__form-element-style bid__form-element-style--with-arrow">
@@ -144,14 +146,17 @@
                 <option value="">Ремонт и строительство</option>
               </select>
             </div>
-
             <div class="bid__sub-category-wrapper">
               <label for="" class="bid__input-label">Подкатегория*</label>
               <select name="" id="" class="bud__select-sub-category bid__i-need-input bid__form-element-style bid__form-element-style--with-arrow">
                 <option value="">Ремонт под ключ</option>
               </select>
             </div>
+          </div>
 
+
+
+          <div class="bid__group-elements"">
             <div class="bid__description-wrapper">
               <label for="" class="bid__input-label">Опишите пожелания и детали, чтоб исполнители лучше оценили вашу работу*</label>
               <textarea class="bud__description-textarea bud__select-category bid__form-element-style"></textarea>
@@ -162,110 +167,129 @@
               <div class="bid__dragfile-area">
                 <p class="bid__dragfile-text">
                   Или <input type="file" class="bid__files-upload" id="bid__files-upload"> с  <label for="bid__files-upload" class="bid__files-upload-pseudo">загрузите</label> c устройства<br>
-                 
+
                   <span>Можно загружать до 8 фотографий,<br>
-                  максимальный размер 5мб</span>
-                </p>
+                    максимальный размер 5мб</span>
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div class="bid__budget-wrapper">
-              <label for="" class="bid__input-label">Бюджет*</label>
-              <input type="text" class="bud__buget-area bid__i-need-input bid__form-element-style">
+            
+            <div class="bid__group-elements">
+              <div class="bid__budget-wrapper">
+                <label for="" class="bid__input-label">Бюджет*</label>
+                <input type="text" class="bud__buget-area bid__i-need-input bid__form-element-style">
+              </div>
+
+
+              <div class="bid__treaty-wrapper">
+                <label class="bid__treaty-checkbox-label" for="treaty-checkbox">
+                  <input type="checkbox" class="bid__treaty-checkbox" id="treaty-checkbox">
+                  По договору
+                </label>
+              </div>
+
+
+              <div class="bid__period-wrapper">
+                <label for="" class="bid__input-label">Сроки исполнения*</label>
+
+                <select name="" id="" class="bid__period-select bid__form-element-style bid__form-element-style--with-arrow">
+                  <option value="period">Указать период</option>
+                  <option value="start">Начать работу</option>
+                  <option value="finish">Завершить работу</option>
+                </select>
+              </div>
+
+              <div class="bid__start-wrapper">
+                <label for="" class="bid__input-label">Начать</label>
+                <input type="text" name="start-date" class="bud__start-area-date bid__form-element-style bid__form-element-style--big-part-l bid__form-element-style--with-arrow" placeholder="Дата">
+                <input type="time" name="start-time" class="bud__start-area-time bid__form-element-style bid__form-element-style--small-part-r" placeholder="Время">
+              </div>
+
+
+              <div class="bid__finish-wrapper">
+                <label for="" class="bid__input-label">Завершить</label>
+                <input type="text" name="finish-date" class="bud__finish-area-date bid__form-element-style bid__form-element-style--big-part-l bid__form-element-style--with-arrow" placeholder="Дата">
+                <input type="time" name="finish-time" class="bud__finish-area-time bid__form-element-style bid__form-element-style--small-part-r" placeholder="Время">
+              </div>
             </div>
+
 
             
-            <div class="bid__treaty-wrapper">
-              <label class="bid__treaty-checkbox-label" for="treaty-checkbox">
-                <input type="checkbox" class="bid__treaty-checkbox" id="treaty-checkbox">
-                По договору
-              </label>
+
+            <div class="bid__group-elements">
+              <div class="bid__index-wrapper">
+                <label for="" class="bid__input-label ">Индекс</label>
+                <input type="text" class="bud__index bid__form-element-style">
+              </div>
+              <div class="bid__city-wrapper">
+                <label for="" class="bid__input-label">Город*</label>
+                <select name="" id="" class="bud__select-city bid__form-element-style bid__form-element-style--with-arrow">
+                  <option value="">Выберете город</option>
+                </select>
+              </div>
+              <div class="bid__address-wrapper">
+                <label for="" class="bid__input-label">Адрес*</label>
+                <input type="text" class="bud__address bid__form-element-style">
+              </div>
             </div>
 
+            <div class="bid__group-elements">
+              <b class="bid__contacts-title">Ваши контакты</b>           
+              <div class="bid__name-wrapper">
+                <label for="" class="bid__input-label">Имя, Фамилия</label>
+                <input type="text" class="bud__name bid__form-element-style">
+              </div>
+              <div class="bid__phone-wrapper">
+                <label for="" class="bid__input-label">Телефон</label>
+                <input type="text" class="bud__phone bid__form-element-style">
+              </div>
+              <div class="bid__email-wrapper">
+                <label for="" class="bid__input-label">Email</label>
+                <input type="email" class="bud__mail bid__form-element-style">
+              </div>
 
-            <div class="bid__period-wrapper">
-              <label for="" class="bid__input-label">Сроки исполнения*</label>
-              
-              <select name="" id="" class="bid__period-select bid__form-element-style bid__form-element-style--with-arrow">
-                <option value="period">Указать период</option>
-                <option value="start">Начать работу</option>
-                <option value="finish">Завершить работу</option>
-              </select>
-            </div>
+            </div>           
 
-            <div class="bid__start-wrapper">
-              <label for="" class="bid__input-label">Начать</label>
-              <input type="text" name="start-date" class="bud__start-area-date bid__form-element-style bid__form-element-style--big-part-l bid__form-element-style--with-arrow" placeholder="Дата">
-              <input type="text" name="start-time" class="bud__start-area-time bid__form-element-style bid__form-element-style--small-part-r" placeholder="Время">
+            <div class="bid__group-elements">
+              <div class="bid__agreement-wrapper">
+                <label class="modal-popup__agree-label">
+                  <input type="checkbox" class=""><span class=""></span> Я согласен с <a href="#" class="modal-popup__agree-link">Правилами caйта</a>«birzha.md»* 
+                </label>
+              </div>
+              <div class="bid__submit-button-wrapper">
+                <button type="submit" class="button button--full-width">Отправить заявку</button>
+              </div>
             </div>
             
-
-            <div class="bid__finish-wrapper">
-              <label for="" class="bid__input-label">Завершить</label>
-              <input type="text" name="finish-date" class="bud__finish-area-date bid__form-element-style bid__form-element-style--big-part-l bid__form-element-style--with-arrow" placeholder="Дата">
-              <input type="text" name="finish-time" class="bud__finish-area-time bid__form-element-style bid__form-element-style--small-part-r" placeholder="Время">
-            </div>
-
-            <div class="bid__index-wrapper">
-              <label for="" class="bid__input-label ">Индекс</label>
-              <input type="number" class="bud__index bid__form-element-style">
-            </div>
-            
-
-            <div class="bid__city-wrapper">
-              <label for="" class="bid__input-label">Город*</label>
-              <select name="" id="" class="bud__select-city bid__form-element-style bid__form-element-style--with-arrow">
-                <option value="">Выберете город</option>
-              </select>
-            </div>
-
-            <div class="bid__address-wrapper">
-              <label for="" class="bid__input-label">Адрес*</label>
-              <input type="text" class="bud__address bid__form-element-style">
-            </div>
-            
-
-            <b class="bid__contacts-title">Ваши контакты</b>           
-
-            <div class="bid__name-wrapper">
-              <label for="" class="bid__input-label">Имя, Фамилия</label>
-              <input type="text" class="bud__name bid__form-element-style">
-            </div>
-
-            <div class="bid__phone-wrapper">
-              <label for="" class="bid__input-label">Телефон</label>
-              <input type="text" class="bud__phone bid__form-element-style">
-            </div>
-            
-            
-            <div class="bid__email-wrapper">
-              <label for="" class="bid__input-label">Email</label>
-              <input type="email" class="bud__mail bid__form-element-style">
-            </div>
-
-            <div class="bid__agreement-wrapper">
-              <label class="modal-popup__agree-label">
-                <input type="checkbox" class=""><span class=""></span> Я согласен с <a href="#" class="modal-popup__agree-link">Правилами caйта</a>«birzha.md»* 
-              </label>
-            </div>
-            
-            <div class="bid__submit-button-wrapper">
-              <button type="submit" class="button button--full-width">Отправить заявку</button>
-            </div>
 
           </form>
 
-      </div><!--container-->
-    </div><!---bid-->
+        </div><!--container-->
+      </div><!---bid-->
 
 
-  </div>
+    </div>
 
 
 
-  <script  type="text/javascript" src="libs/jquery-3.3.1.min.js"></script>
-  <script  type="text/javascript" src="libs/jquery-ui/jquery-ui.min.js"></script>
-  <script  type="text/javascript" src="libs/bootsrap/javascripts/bootstrap.min.js"></script>
-  <script  type="text/javascript" src="js/script.js"></script>
-</body>
-</html>
+    <script type="text/javascript" src="libs/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="libs/bootsrap/javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs/jquery-ui/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="libs/jquery-ui/jquery-ui-timepicker-addon.min.js"></script>
+
+    <script type="text/javascript" src="libs/jquery-ui/datepicker-ro.js"></script>
+    <script type="text/javascript" src="libs/jquery-ui/datepicker-ru.js"></script>
+
+    <script type="text/javascript" src="libs/jquery-ui/jquery-ui-timepicker-ro.js"></script>
+    <script type="text/javascript" src="libs/jquery-ui/jquery-ui-timepicker-ru.js"></script>
+
+    <script type="text/javascript" src="libs/wickedpicker/src/wickedpicker.js"></script>
+
+
+
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+  </html>

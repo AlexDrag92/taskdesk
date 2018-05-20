@@ -116,99 +116,88 @@ menuButton.on('click', function(){
 });
 
 
-//DatePicker langs
-var lang = "ru";
 
-( function( factory ) {
-  if ( typeof define === "function" && define.amd ) {
-    define( [ "../widgets/datepicker" ], factory );
-  } else {
-    factory( jQuery.datepicker );
-  }
-}( function( datepicker ) {
 
-  datepicker.regional.ro = {
-    closeText: "Închide",
-    prevText: "&#xAB; Luna precedentă",
-    nextText: "Luna următoare &#xBB;",
-    currentText: "Azi",
-    monthNames: [ "Ianuarie","Februarie","Martie","Aprilie","Mai","Iunie",
-    "Iulie","August","Septembrie","Octombrie","Noiembrie","Decembrie" ],
-    monthNamesShort: [ "Ian", "Feb", "Mar", "Apr", "Mai", "Iun",
-    "Iul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
-    dayNames: [ "Duminică", "Luni", "Marţi", "Miercuri", "Joi", "Vineri", "Sâmbătă" ],
-    dayNamesShort: [ "Dum", "Lun", "Mar", "Mie", "Joi", "Vin", "Sâm" ],
-    dayNamesMin: [ "Du","Lu","Ma","Mi","Jo","Vi","Sâ" ],
-    weekHeader: "Săpt",
-    dateFormat: "dd.mm.yy",
-    firstDay: 1,
-    isRTL: false,
-    showMonthAfterYear: false,
-    yearSuffix: ""
-  };
 
-  datepicker.regional.ru = {
-    closeText: "Закрыть",
-    prevText: "&#x3C;Пред",
-    nextText: "След&#x3E;",
-    currentText: "Сегодня",
-    monthNames: [ "Январь","Февраль","Март","Апрель","Май","Июнь",
-    "Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь" ],
-    monthNamesShort: [ "Янв","Фев","Мар","Апр","Май","Июн",
-    "Июл","Авг","Сен","Окт","Ноя","Дек" ],
-    dayNames: [ "воскресенье","понедельник","вторник","среда","четверг","пятница","суббота" ],
-    dayNamesShort: [ "вск","пнд","втр","срд","чтв","птн","сбт" ],
-    dayNamesMin: [ "Вс","Пн","Вт","Ср","Чт","Пт","Сб" ],
-    weekHeader: "Нед",
-    dateFormat: "dd.mm.yy",
-    firstDay: 1,
-    isRTL: false,
-    showMonthAfterYear: false,
-    yearSuffix: ""
-  };
 
-  if( lang === "ru"){
-    datepicker.setDefaults( datepicker.regional.ru);
-  }else if( lang === "ro"){
-    datepicker.setDefaults( datepicker.regional.ro);
-  }
 
-} ) );
+
+
+
+
+
 
 
 //datePickers
-$('.bud__start-area-date').datepicker({
-  constrainInput: false,
-  dateFormat: 'dd.mm.y'
-})
 
-$('.bud__finish-area-date').datepicker({
-  constrainInput: false,
-  dateFormat: 'dd.mm.y'
-})
+var lang = "ru"
+
+$.datepicker.setDefaults($.datepicker.regional[lang]);
+$.timepicker.setDefaults($.timepicker.regional[lang]);
+
+$('.bud__start-area-date, .bud__finish-area-date').each(function () {
+  $(this).datepicker({
+    constrainInput: false,
+    dateFormat: 'dd.mm.y',
+  });
+});
+
+
+
+
+
+
+if($(window).width() > 768){
+  $('.bud__start-area-time, .bud__finish-area-time').each(function () {
+    $(this).timepicker();
+  });
+}
+
+
+
 
 //Toggle inputs
 $('.bid__period-select').on('click', function(){
   if($(this).val() == 'period'){
     console.log('p');
     $('.bud__start-area-date, .bud__start-area-time, .bud__finish-area-date, .bud__finish-area-time').each(function(){
-      $(this).removeAttr('disabled');
+      $(this).removeAttr('disabled').css('opacity', '1');
     });
   }else if($(this).val() == 'start'){
     console.log('s');
     $('.bud__start-area-date, .bud__start-area-time').each(function(){
-      $(this).removeAttr('disabled');
+      $(this).removeAttr('disabled').css('opacity', '1');
     });
     $('.bud__finish-area-date, .bud__finish-area-time').each(function(){
-      $(this).attr('disabled', true);
+      $(this).attr('disabled', true).css('opacity', '.4');
     });
   }else if($(this).val() == 'finish'){
     console.log('f');
-   $('.bud__start-area-date, .bud__start-area-time').each(function(){
-    $(this).attr('disabled', true);
-  });
-   $('.bud__finish-area-date, .bud__finish-area-time').each(function(){
-    $(this).removeAttr('disabled');
-  });
- }
+    $('.bud__start-area-date, .bud__start-area-time').each(function(){
+      $(this).attr('disabled', true).css('opacity', '.4');
+    });
+    $('.bud__finish-area-date, .bud__finish-area-time').each(function(){
+      $(this).removeAttr('disabled').css('opacity', '1');
+    });
+  }
 });
+
+
+
+//Placeholders
+
+var timeElements = $('.bid__form-element-style--small-part-r');
+
+timeElements.each(function () {
+  $(this).addClass('bid__form-element-style--pseudo-placeholder');
+
+  $(this).on('focus', function(){
+    $(this).removeClass('bid__form-element-style--pseudo-placeholder')
+  });
+
+  $(this).on('blur', function(){
+    $(this).removeClass('bid__form-element-style--pseudo-placeholder')
+  })
+});
+
+

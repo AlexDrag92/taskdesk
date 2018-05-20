@@ -3,12 +3,15 @@
 }
 
 .bid__form{
+	
+}
+
+.bid__group-elements{
 	@include make-row();
 }
 
-
 .bid [class*="wrapper"]{
-	//outline: 1px solid royalblue;
+	outline: 1px solid royalblue;
 }
 
 
@@ -19,9 +22,9 @@
 
 .bid__form-element-style{
 	display: block;
+	position: relative;
 	padding: 10px 10px;
 	width: 100%;
-	box-sizing: border-box;
 	background: $color6;
 	border: 1px solid $color8;
 	border-radius: 4px;
@@ -45,11 +48,11 @@
 
 	&:focus{
 		width: calc(100% - 2px);
-		padding-top: 9px;
-		padding-bottom: 9px;
+		padding: 9px;
 		outline: none;
 		box-sizing: border-box;
-		border: 2px solid $color3;
+		border: 2px solid $color3;	
+		transition: padding .5s, border .5s;
 	}
 
 	&--with-arrow{
@@ -57,6 +60,7 @@
 		background-position: calc(100% - 10px) center;
 		background-repeat: no-repeat;
 		background-size: 10px;
+		
 	}
 
 	&--big-part-l{
@@ -64,6 +68,16 @@
 		width: 60%;
 		border-right: none;
 		border-radius: 4px 0 0 4px;
+
+		&::-moz-placeholder{
+			color: $color4;
+		}
+		&::-webkit-input-placeholder{
+			color: $color4;
+		}
+		&::-ms-input-placeholder{
+			color: $color4;
+		}
 
 		&:focus{
 			padding: 10px;
@@ -73,7 +87,7 @@
 		}
 
 		background-image: url('../img/icons/down-chevron-plum.png'),
-						  url('../img/icons/vertical-line.png');
+		url('../img/icons/vertical-line.png');
 		background-position: calc(100% - 15px) center, right center;
 		background-repeat: no-repeat;
 		background-size: 10px;
@@ -81,21 +95,54 @@
 		
 	}
 
+	
+	
+
 	&--small-part-r{
 		float: right;
 		width: 40%;
+		position: relative;
 		border-left: none;
 		border-radius: 0 4px 4px 0;
+		padding: 10px;
+		padding-bottom: 8px;
 
 		&:focus{
 			padding: 10px;
 			border: 1px solid $color8;
 			border-left: none;
 			width: 40%;
+			padding-bottom: 7px;
+		}
+
+		&::-webkit-clear-button {
+			display: none;
+		}
+		
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button{ 
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			margin: 0; 
 		}
 	}
-}
 
+	&--pseudo-placeholder{
+
+		&:after{
+			content: "Время";
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			padding-left: 	3px;
+			background: $color6;
+			color: $color4;
+		}
+		
+	}
+}
 
 
 .bid__category-wrapper{
