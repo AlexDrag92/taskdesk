@@ -11,7 +11,7 @@
 }
 
 .bid [class*="wrapper"]{
-	outline: 1px solid royalblue;
+	//outline: 1px solid royalblue;
 }
 
 
@@ -52,7 +52,7 @@
 		outline: none;
 		box-sizing: border-box;
 		border: 2px solid $color3;	
-		transition: padding .5s, border .5s;
+		transition: padding 0s, border 0s;
 	}
 
 	&--with-arrow{
@@ -70,12 +70,15 @@
 		border-radius: 4px 0 0 4px;
 
 		&::-moz-placeholder{
-			color: $color4;
+			color: darken($color4, 70%);
 		}
 		&::-webkit-input-placeholder{
 			color: $color4;
 		}
 		&::-ms-input-placeholder{
+			color: $color4;
+		}
+		&::input-placeholder{
 			color: $color4;
 		}
 
@@ -107,12 +110,14 @@
 		padding: 10px;
 		padding-bottom: 8px;
 
+
+
 		&:focus{
 			padding: 10px;
 			border: 1px solid $color8;
 			border-left: none;
 			width: 40%;
-			padding-bottom: 7px;
+			padding-bottom: 8px;
 		}
 
 		&::-webkit-clear-button {
@@ -126,23 +131,25 @@
 			appearance: none;
 			margin: 0; 
 		}
-	}
 
-	&--pseudo-placeholder{
+		  appearance: none;
+		  -moz-appearance: none;
+		  -webkit-appearance: none;
 
-		&:after{
-			content: "Время";
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			left: 0;
-			padding-left: 	3px;
-			background: $color6;
-			color: $color4;
+		&::-webkit-datetime-edit-ampm-field {
+			display: none;
 		}
-		
 	}
 }
+
+
+.bid__pseudo-placeholder{
+	display: block;
+	background: $color6;
+	width: calc(40% - 15px);
+	position: absolute;
+	bottom: 5px;
+	left: 60%;}
 
 
 .bid__category-wrapper{

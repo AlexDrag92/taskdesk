@@ -7,7 +7,6 @@
   <title>TaskDesk</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="favicon.ico" rel="shortcut icon" type="image/ico">
-  <link rel="stylesheet" href="http://trentrichardson.com/examples/timepicker/jquery-ui-timepicker-addon.css">
   <link rel="stylesheet" href="libs/jquery-ui/jquery-ui-timepicker-addon.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -204,14 +203,16 @@
               <div class="bid__start-wrapper">
                 <label for="" class="bid__input-label">Начать</label>
                 <input type="text" name="start-date" class="bud__start-area-date bid__form-element-style bid__form-element-style--big-part-l bid__form-element-style--with-arrow" placeholder="Дата">
-                <input type="time" name="start-time" class="bud__start-area-time bid__form-element-style bid__form-element-style--small-part-r" placeholder="Время">
+                <input type="time" name="start-time" class="bud__start-area-time bid__form-element-style bid__form-element-style--small-part-r" id="start-time">
+                <label for="start-time" class="bid__pseudo-placeholder">Время</label>
               </div>
 
 
               <div class="bid__finish-wrapper">
                 <label for="" class="bid__input-label">Завершить</label>
                 <input type="text" name="finish-date" class="bud__finish-area-date bid__form-element-style bid__form-element-style--big-part-l bid__form-element-style--with-arrow" placeholder="Дата">
-                <input type="time" name="finish-time" class="bud__finish-area-time bid__form-element-style bid__form-element-style--small-part-r" placeholder="Время">
+                <input type="time" name="finish-time" class="bud__finish-area-time bid__form-element-style bid__form-element-style--small-part-r" id="finish-time">
+                <label for="finish-time" class="bid__pseudo-placeholder">Время</label>
               </div>
             </div>
 
@@ -255,7 +256,7 @@
             <div class="bid__group-elements">
               <div class="bid__agreement-wrapper">
                 <label class="modal-popup__agree-label">
-                  <input type="checkbox" class=""><span class=""></span> Я согласен с <a href="#" class="modal-popup__agree-link">Правилами caйта</a>«birzha.md»* 
+                  <input type="checkbox" class=""><span class=""></span> Я согласен с <a href="#" class="modal-popup__agree-link">Правилами caйта</a> «birzha.md»* 
                 </label>
               </div>
               <div class="bid__submit-button-wrapper">
