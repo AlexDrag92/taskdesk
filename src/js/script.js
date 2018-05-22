@@ -188,11 +188,6 @@ pseudoPlaceholders.each(function(){
 });
 
 
-
-var startFinishTimes = $('.bud__finish-area-time, .bud__start-area-time');
-
-
-
 startFinishTimes.each(function(){
   $(this).on('focus', function(){
     $(this).next().slideUp();
@@ -205,8 +200,8 @@ if($(window).width() <= 768){
     $(this).on('focusout', function(){
       console.log($(this).val()+'!!')
       if($(this).val() == ""){
-        $(this).next().show()
+        $(this).next().show();
       }
     });
   });
-}
+};
